@@ -1,0 +1,20 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./data:/app/data
+      - ./vendor:/app/vendor:ro
+    environment:
+      - LI_ROOT=/app
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "8080:80"
+    depends_on:
+      - api

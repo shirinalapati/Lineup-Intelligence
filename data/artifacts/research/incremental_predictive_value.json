@@ -1,0 +1,143 @@
+{
+  "train_season": 2024,
+  "valid_season": 2025,
+  "models": [
+    {
+      "model": "m1_talent",
+      "n_train": 141600,
+      "n_valid": 129452,
+      "train_season": 2024,
+      "valid_season": 2025,
+      "talent_feature_season": 2024,
+      "rmse": 0.506864440084722,
+      "rmse_lift_vs_m1": 0.0,
+      "logloss_reached": 0.6931617179370437,
+      "logloss_lift_vs_m1": 0.0,
+      "numeric_features": [
+        "batter_woba",
+        "batter_k",
+        "batter_bb",
+        "batter_iso"
+      ],
+      "categorical_features": [
+        "pitcher_hand",
+        "season"
+      ]
+    },
+    {
+      "model": "m2_slot",
+      "n_train": 141600,
+      "n_valid": 129452,
+      "train_season": 2024,
+      "valid_season": 2025,
+      "talent_feature_season": 2024,
+      "rmse": 0.5069913223516971,
+      "rmse_lift_vs_m1": -0.00012688226697510352,
+      "logloss_reached": 0.6906535896547482,
+      "logloss_lift_vs_m1": 0.0025081282822955187,
+      "numeric_features": [
+        "batter_woba",
+        "batter_k",
+        "batter_bb",
+        "batter_iso"
+      ],
+      "categorical_features": [
+        "pitcher_hand",
+        "season",
+        "slot"
+      ]
+    },
+    {
+      "model": "m3_state",
+      "n_train": 141600,
+      "n_valid": 129452,
+      "train_season": 2024,
+      "valid_season": 2025,
+      "talent_feature_season": 2024,
+      "rmse": 0.5069073539533385,
+      "rmse_lift_vs_m1": -4.2913868616545336e-05,
+      "logloss_reached": 0.6691971476212674,
+      "logloss_lift_vs_m1": 0.023964570315776368,
+      "numeric_features": [
+        "batter_woba",
+        "batter_k",
+        "batter_bb",
+        "batter_iso"
+      ],
+      "categorical_features": [
+        "pitcher_hand",
+        "season",
+        "slot",
+        "outs_start",
+        "bases_start"
+      ]
+    },
+    {
+      "model": "m4_prev_feats",
+      "n_train": 141599,
+      "n_valid": 118608,
+      "train_season": 2024,
+      "valid_season": 2025,
+      "talent_feature_season": 2024,
+      "rmse": 0.5082869608268368,
+      "rmse_lift_vs_m1": -0.0014225207421147967,
+      "logloss_reached": 0.6657076980941288,
+      "logloss_lift_vs_m1": 0.027454019842914956,
+      "numeric_features": [
+        "batter_woba",
+        "batter_k",
+        "batter_bb",
+        "batter_iso",
+        "prev_woba",
+        "prev_k",
+        "prev_bb",
+        "prev_iso"
+      ],
+      "categorical_features": [
+        "pitcher_hand",
+        "season",
+        "slot",
+        "outs_start",
+        "bases_start",
+        "prev_outcome"
+      ]
+    },
+    {
+      "model": "m5_arch_interact",
+      "n_train": 141599,
+      "n_valid": 118608,
+      "train_season": 2024,
+      "valid_season": 2025,
+      "talent_feature_season": 2024,
+      "rmse": 0.5082869608268368,
+      "rmse_lift_vs_m1": -0.0014225207421147967,
+      "logloss_reached": 0.7196585912347349,
+      "logloss_lift_vs_m1": -0.026496873297691126,
+      "numeric_features": [
+        "batter_woba",
+        "batter_k",
+        "batter_bb",
+        "batter_iso",
+        "prev_woba",
+        "prev_k",
+        "prev_bb",
+        "prev_iso"
+      ],
+      "categorical_features": [
+        "pitcher_hand",
+        "season",
+        "slot",
+        "outs_start",
+        "bases_start",
+        "prev_outcome",
+        "arch_pair"
+      ]
+    }
+  ],
+  "apply": {
+    "season": 2026,
+    "n_pa": 103843,
+    "note": "Target-season rows are available for optional scoring; metrics above are strictly train\u2192validate temporal lifts and do not peek at the apply season."
+  },
+  "interpretation": "Positive rmse_lift_vs_m1 / logloss_lift_vs_m1 means the richer model improved out-of-sample prediction relative to individual talent. Zero/negative lift is an informative negative result about interaction value. Validation talent features are taken from the train season to avoid same-season leakage."
+}

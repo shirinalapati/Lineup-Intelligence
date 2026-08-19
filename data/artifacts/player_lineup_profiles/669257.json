@@ -1,0 +1,1995 @@
+{
+  "available": true,
+  "player_id": 669257,
+  "name": "Will Smith",
+  "data_cutoff": "2026-08-17",
+  "season": 2026,
+  "offensive_profile": {
+    "label": "Power",
+    "display_name": "Offensive profile",
+    "tooltip": "Exploratory profile group derived from unsupervised clustering of hitter characteristics."
+  },
+  "summary": {
+    "primary_actual_slot": 3,
+    "best_modeled_slot": 1,
+    "placement_opportunity": 0.00290552824278123,
+    "actual_slot_fit_rank": 3,
+    "near_equivalent_slots": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      4,
+      7,
+      8
+    ],
+    "best_context": "Neutral",
+    "offensive_profile": "Power",
+    "actual_usage_fit": {
+      "avg_slot_rank": 3.652173913043478,
+      "avg_opportunity_gap": 0.004026525275685622,
+      "pct_top1": 0.0,
+      "pct_top3": 0.5434782608695652,
+      "pct_within_01": 0.9130434782608695,
+      "pct_within_02": 1.0,
+      "n_starts": 46
+    },
+    "placement_opportunity_rank": {
+      "value": 0.00290552824278123,
+      "rank": 172,
+      "population_n": 518,
+      "percentile": 67,
+      "qualifying_threshold": 10,
+      "direction": "higher_better",
+      "qualified": true,
+      "metric": "placement_opportunity",
+      "display": "0.003",
+      "note": null,
+      "sample_size": 46.0
+    }
+  },
+  "season_metrics": {
+    "player_id": 669257,
+    "pa": 201.0,
+    "team": "LAD",
+    "metrics": {
+      "woba": {
+        "mlb": {
+          "value": 0.321,
+          "rank": 168,
+          "population_n": 419,
+          "percentile": 60,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "woba",
+          "display": "0.321",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.321,
+          "rank": 9,
+          "population_n": 15,
+          "percentile": 47,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "woba",
+          "display": "0.321",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "xwoba": {
+        "mlb": {
+          "value": 0.385,
+          "rank": 9,
+          "population_n": 419,
+          "percentile": 98,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "xwoba",
+          "display": "0.385",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.385,
+          "rank": 2,
+          "population_n": 15,
+          "percentile": 93,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "xwoba",
+          "display": "0.385",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "obp": {
+        "mlb": {
+          "value": 0.338,
+          "rank": 110,
+          "population_n": 419,
+          "percentile": 74,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "obp",
+          "display": "0.338",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.338,
+          "rank": 8,
+          "population_n": 15,
+          "percentile": 53,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "obp",
+          "display": "0.338",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "slg": {
+        "mlb": {
+          "value": 0.382,
+          "rank": 238,
+          "population_n": 419,
+          "percentile": 43,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "slg",
+          "display": "0.382",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.382,
+          "rank": 12,
+          "population_n": 15,
+          "percentile": 27,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "slg",
+          "display": "0.382",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "iso": {
+        "mlb": {
+          "value": 0.133,
+          "rank": 259,
+          "population_n": 419,
+          "percentile": 38,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "iso",
+          "display": "0.133",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.133,
+          "rank": 10,
+          "population_n": 15,
+          "percentile": 40,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "iso",
+          "display": "0.133",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "wrc_plus": {
+        "mlb": {
+          "value": 101.6,
+          "rank": 168,
+          "population_n": 419,
+          "percentile": 60,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "wrc_plus",
+          "display": "102",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 101.6,
+          "rank": 9,
+          "population_n": 15,
+          "percentile": 47,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "wrc_plus",
+          "display": "102",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "xslg": {
+        "mlb": {
+          "value": 0.494,
+          "rank": 29,
+          "population_n": 419,
+          "percentile": 93,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "xslg",
+          "display": "0.494",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.494,
+          "rank": 2,
+          "population_n": 15,
+          "percentile": 93,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "xslg",
+          "display": "0.494",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "k_pct": {
+        "mlb": {
+          "value": 0.16899999999999998,
+          "rank": 79,
+          "population_n": 419,
+          "percentile": 81,
+          "qualifying_threshold": 100,
+          "direction": "lower_better",
+          "qualified": true,
+          "metric": "k_pct",
+          "display": "16.9%",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.16899999999999998,
+          "rank": 5,
+          "population_n": 15,
+          "percentile": 73,
+          "qualifying_threshold": 100,
+          "direction": "lower_better",
+          "qualified": true,
+          "metric": "k_pct",
+          "display": "16.9%",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "bb_pct": {
+        "mlb": {
+          "value": 0.114,
+          "rank": 85,
+          "population_n": 419,
+          "percentile": 80,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "bb_pct",
+          "display": "11.4%",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.114,
+          "rank": 6,
+          "population_n": 15,
+          "percentile": 67,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "bb_pct",
+          "display": "11.4%",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "chase_pct": {
+        "mlb": {
+          "value": 0.213,
+          "rank": 22,
+          "population_n": 419,
+          "percentile": 95,
+          "qualifying_threshold": 100,
+          "direction": "lower_better",
+          "qualified": true,
+          "metric": "chase_pct",
+          "display": "21.3%",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.213,
+          "rank": 2,
+          "population_n": 15,
+          "percentile": 93,
+          "qualifying_threshold": 100,
+          "direction": "lower_better",
+          "qualified": true,
+          "metric": "chase_pct",
+          "display": "21.3%",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "contact_pct": {
+        "mlb": {
+          "value": 0.8590000000000001,
+          "rank": 29,
+          "population_n": 419,
+          "percentile": 93,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "contact_pct",
+          "display": "85.9%",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.8590000000000001,
+          "rank": 3,
+          "population_n": 15,
+          "percentile": 87,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "contact_pct",
+          "display": "85.9%",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "z_contact_pct": {
+        "mlb": {
+          "value": 0.889,
+          "rank": 72,
+          "population_n": 419,
+          "percentile": 83,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "z_contact_pct",
+          "display": "88.9%",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.889,
+          "rank": 5,
+          "population_n": 15,
+          "percentile": 73,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "z_contact_pct",
+          "display": "88.9%",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "avg_exit_velocity": {
+        "mlb": {
+          "value": 90.0,
+          "rank": 117,
+          "population_n": 419,
+          "percentile": 72,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "avg_exit_velocity",
+          "display": "90.0",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 90.0,
+          "rank": 5,
+          "population_n": 15,
+          "percentile": 73,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "avg_exit_velocity",
+          "display": "90.0",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "hardhit_pct": {
+        "mlb": {
+          "value": 0.39399999999999996,
+          "rank": 199,
+          "population_n": 419,
+          "percentile": 53,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "hardhit_pct",
+          "display": "39.4%",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.39399999999999996,
+          "rank": 8,
+          "population_n": 15,
+          "percentile": 53,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "hardhit_pct",
+          "display": "39.4%",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "barrel_pct": {
+        "mlb": {
+          "value": 0.134,
+          "rank": 53,
+          "population_n": 419,
+          "percentile": 88,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "barrel_pct",
+          "display": "13.4%",
+          "note": null,
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.134,
+          "rank": 2,
+          "population_n": 15,
+          "percentile": 93,
+          "qualifying_threshold": 100,
+          "direction": "higher_better",
+          "qualified": true,
+          "metric": "barrel_pct",
+          "display": "13.4%",
+          "note": null,
+          "sample_size": 201.0
+        }
+      },
+      "gb_pct": {
+        "mlb": {
+          "value": 0.282,
+          "rank": 412,
+          "population_n": 419,
+          "percentile": 2,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "gb_pct",
+          "display": "28.2%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.282,
+          "rank": 15,
+          "population_n": 15,
+          "percentile": 7,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "gb_pct",
+          "display": "28.2%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        }
+      },
+      "ld_pct": {
+        "mlb": {
+          "value": 0.289,
+          "rank": 28,
+          "population_n": 419,
+          "percentile": 94,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "ld_pct",
+          "display": "28.9%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.289,
+          "rank": 3,
+          "population_n": 15,
+          "percentile": 87,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "ld_pct",
+          "display": "28.9%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        }
+      },
+      "fb_pct": {
+        "mlb": {
+          "value": 0.38,
+          "rank": 14,
+          "population_n": 419,
+          "percentile": 97,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "fb_pct",
+          "display": "38.0%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.38,
+          "rank": 1,
+          "population_n": 15,
+          "percentile": 100,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "fb_pct",
+          "display": "38.0%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        }
+      },
+      "pull_pct": {
+        "mlb": {
+          "value": 0.303,
+          "rank": 387,
+          "population_n": 419,
+          "percentile": 8,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "pull_pct",
+          "display": "30.3%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.303,
+          "rank": 15,
+          "population_n": 15,
+          "percentile": 7,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "pull_pct",
+          "display": "30.3%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        }
+      },
+      "center_pct": {
+        "mlb": {
+          "value": 0.3520000000000001,
+          "rank": 354,
+          "population_n": 419,
+          "percentile": 16,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "center_pct",
+          "display": "35.2%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.3520000000000001,
+          "rank": 12,
+          "population_n": 15,
+          "percentile": 27,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "center_pct",
+          "display": "35.2%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        }
+      },
+      "oppo_pct": {
+        "mlb": {
+          "value": 0.345,
+          "rank": 1,
+          "population_n": 419,
+          "percentile": 100,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "oppo_pct",
+          "display": "34.5%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        },
+        "team": {
+          "value": 0.345,
+          "rank": 1,
+          "population_n": 15,
+          "percentile": 100,
+          "qualifying_threshold": 100,
+          "direction": "neutral",
+          "qualified": true,
+          "metric": "oppo_pct",
+          "display": "34.5%",
+          "note": "Descriptive distribution percentile (not a quality judgment)",
+          "sample_size": 201.0
+        }
+      }
+    }
+  },
+  "slot_usage": {
+    "1": 1,
+    "2": 2,
+    "3": 20,
+    "4": 2,
+    "5": 12,
+    "6": 3,
+    "7": 6
+  },
+  "modeled_slot_fit": {
+    "neutral": {
+      "slots": [
+        {
+          "slot": 1,
+          "expected_runs": 5.454428844195016,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.2056084218473395,
+          "expected_pa_162": 781.6961638976012,
+          "prob_two_out": 0.22709819699371792,
+          "prob_risp": 0.05035702397672936,
+          "prob_runners_on": 0.3586198163087807,
+          "expected_pa": 4.825284962330872,
+          "avg_runners_on": 0.2480668069000623,
+          "prob_bases_empty": 0.6413801836912194,
+          "delta_vs_avg": 0.005219594514589865,
+          "delta_vs_primary": 0.00290552824278123,
+          "fit_rank": 1
+        },
+        {
+          "slot": 2,
+          "expected_runs": 5.451794047070366,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.08333869050597494,
+          "expected_pa_162": 763.9553918551654,
+          "prob_two_out": 0.22527776396647364,
+          "prob_risp": 0.05111228825508992,
+          "prob_runners_on": 0.43593947872757705,
+          "expected_pa": 4.715774023797317,
+          "avg_runners_on": 0.31021866451233804,
+          "prob_bases_empty": 0.564060521272423,
+          "delta_vs_avg": 0.0025847973899395527,
+          "delta_vs_primary": 0.000270731118130918,
+          "fit_rank": 2
+        },
+        {
+          "slot": 3,
+          "expected_runs": 5.451523315952235,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.08522464885403097,
+          "expected_pa_162": 745.6937838398734,
+          "prob_two_out": 0.2788459451074597,
+          "prob_risp": 0.061713413006886965,
+          "prob_runners_on": 0.4814308865977438,
+          "expected_pa": 4.60304804839428,
+          "avg_runners_on": 0.3284676987416871,
+          "prob_bases_empty": 0.5185691134022562,
+          "delta_vs_avg": 0.0023140662718086347,
+          "delta_vs_primary": 0.0,
+          "fit_rank": 3
+        },
+        {
+          "slot": 4,
+          "expected_runs": 5.450026037752149,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.11722573457781219,
+          "expected_pa_162": 727.880544062058,
+          "prob_two_out": 0.27355098532477745,
+          "prob_risp": 0.08449237749571704,
+          "prob_runners_on": 0.504176694673812,
+          "expected_pa": 4.493089778160852,
+          "avg_runners_on": 0.35957057993421715,
+          "prob_bases_empty": 0.49582330532618807,
+          "delta_vs_avg": 0.0008167880717229181,
+          "delta_vs_primary": -0.0014972782000857165,
+          "fit_rank": 6
+        },
+        {
+          "slot": 5,
+          "expected_runs": 5.450521433773202,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.1124992632592009,
+          "expected_pa_162": 710.3692763207737,
+          "prob_two_out": 0.2632452953244324,
+          "prob_risp": 0.0787365836457793,
+          "prob_runners_on": 0.46649097656971705,
+          "expected_pa": 4.3849955328442825,
+          "avg_runners_on": 0.32681755955487135,
+          "prob_bases_empty": 0.5335090234302831,
+          "delta_vs_avg": 0.0013121840927761141,
+          "delta_vs_primary": -0.0010018821790325205,
+          "fit_rank": 4
+        },
+        {
+          "slot": 6,
+          "expected_runs": 5.450043227069266,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.09729055450675364,
+          "expected_pa_162": 693.4034857451163,
+          "prob_two_out": 0.2635722288738038,
+          "prob_risp": 0.06321056424789828,
+          "prob_runners_on": 0.463215050631826,
+          "expected_pa": 4.2802684305254095,
+          "avg_runners_on": 0.3243351720757108,
+          "prob_bases_empty": 0.536784949368174,
+          "delta_vs_avg": 0.0008339773888392799,
+          "delta_vs_primary": -0.0014800888829693548,
+          "fit_rank": 5
+        },
+        {
+          "slot": 7,
+          "expected_runs": 5.445837762618632,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.10274763155831165,
+          "expected_pa_162": 675.3524783796064,
+          "prob_two_out": 0.2841738880067573,
+          "prob_risp": 0.06227763168145203,
+          "prob_runners_on": 0.4537617263696969,
+          "expected_pa": 4.168842459133373,
+          "avg_runners_on": 0.3083149262692528,
+          "prob_bases_empty": 0.5462382736303031,
+          "delta_vs_avg": -0.0033714870617940207,
+          "delta_vs_primary": -0.005685553333602655,
+          "fit_rank": 7
+        },
+        {
+          "slot": 8,
+          "expected_runs": 5.444537508434485,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.10251587556256597,
+          "expected_pa_162": 657.0041468789536,
+          "prob_two_out": 0.2825440709383125,
+          "prob_risp": 0.066102627233342,
+          "prob_runners_on": 0.4564075471528199,
+          "expected_pa": 4.0555811535737885,
+          "avg_runners_on": 0.3178985117961646,
+          "prob_bases_empty": 0.5435924528471802,
+          "delta_vs_avg": -0.004671741245941163,
+          "delta_vs_primary": -0.006985807517749798,
+          "fit_rank": 8
+        },
+        {
+          "slot": 9,
+          "expected_runs": 5.444171070258484,
+          "weight_games": 46.0,
+          "prob_lead_inning": 0.09845234823874208,
+          "expected_pa_162": 638.0467876847871,
+          "prob_two_out": 0.28337597538678105,
+          "prob_risp": 0.0647755420187583,
+          "prob_runners_on": 0.4510591398796204,
+          "expected_pa": 3.9385604178073272,
+          "avg_runners_on": 0.3134801534945019,
+          "prob_bases_empty": 0.5489408601203796,
+          "delta_vs_avg": -0.005038179421942068,
+          "delta_vs_primary": -0.007352245693750703,
+          "fit_rank": 9
+        }
+      ],
+      "best_slot": 1,
+      "best_expected_runs": 5.454428844195016,
+      "near_equivalent_slots": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        4,
+        7,
+        8
+      ],
+      "near_equivalent_slots_02": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        4,
+        7,
+        8,
+        9
+      ],
+      "primary_slot": 3,
+      "primary_expected_runs": 5.451523315952235,
+      "primary_fit_rank": 3,
+      "placement_opportunity": 0.00290552824278123,
+      "avg_placement_runs": 5.449209249680426,
+      "equivalence_eps": 0.01,
+      "n_starts": 46,
+      "n_personnel_groups": 23,
+      "actual_usage_fit": {
+        "avg_slot_rank": 3.652173913043478,
+        "avg_opportunity_gap": 0.004026525275685622,
+        "pct_top1": 0.0,
+        "pct_top3": 0.5434782608695652,
+        "pct_within_01": 0.9130434782608695,
+        "pct_within_02": 1.0,
+        "n_starts": 46
+      }
+    }
+  },
+  "run_opportunity_profile": {
+    "context": "neutral",
+    "slots": [
+      {
+        "slot": 1,
+        "expected_runs": 5.454428844195016,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.2056084218473395,
+        "expected_pa_162": 781.6961638976012,
+        "prob_two_out": 0.22709819699371792,
+        "prob_risp": 0.05035702397672936,
+        "prob_runners_on": 0.3586198163087807,
+        "expected_pa": 4.825284962330872,
+        "avg_runners_on": 0.2480668069000623,
+        "prob_bases_empty": 0.6413801836912194,
+        "delta_vs_avg": 0.005219594514589865,
+        "delta_vs_primary": 0.00290552824278123,
+        "fit_rank": 1
+      },
+      {
+        "slot": 2,
+        "expected_runs": 5.451794047070366,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.08333869050597494,
+        "expected_pa_162": 763.9553918551654,
+        "prob_two_out": 0.22527776396647364,
+        "prob_risp": 0.05111228825508992,
+        "prob_runners_on": 0.43593947872757705,
+        "expected_pa": 4.715774023797317,
+        "avg_runners_on": 0.31021866451233804,
+        "prob_bases_empty": 0.564060521272423,
+        "delta_vs_avg": 0.0025847973899395527,
+        "delta_vs_primary": 0.000270731118130918,
+        "fit_rank": 2
+      },
+      {
+        "slot": 3,
+        "expected_runs": 5.451523315952235,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.08522464885403097,
+        "expected_pa_162": 745.6937838398734,
+        "prob_two_out": 0.2788459451074597,
+        "prob_risp": 0.061713413006886965,
+        "prob_runners_on": 0.4814308865977438,
+        "expected_pa": 4.60304804839428,
+        "avg_runners_on": 0.3284676987416871,
+        "prob_bases_empty": 0.5185691134022562,
+        "delta_vs_avg": 0.0023140662718086347,
+        "delta_vs_primary": 0.0,
+        "fit_rank": 3
+      },
+      {
+        "slot": 4,
+        "expected_runs": 5.450026037752149,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.11722573457781219,
+        "expected_pa_162": 727.880544062058,
+        "prob_two_out": 0.27355098532477745,
+        "prob_risp": 0.08449237749571704,
+        "prob_runners_on": 0.504176694673812,
+        "expected_pa": 4.493089778160852,
+        "avg_runners_on": 0.35957057993421715,
+        "prob_bases_empty": 0.49582330532618807,
+        "delta_vs_avg": 0.0008167880717229181,
+        "delta_vs_primary": -0.0014972782000857165,
+        "fit_rank": 6
+      },
+      {
+        "slot": 5,
+        "expected_runs": 5.450521433773202,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.1124992632592009,
+        "expected_pa_162": 710.3692763207737,
+        "prob_two_out": 0.2632452953244324,
+        "prob_risp": 0.0787365836457793,
+        "prob_runners_on": 0.46649097656971705,
+        "expected_pa": 4.3849955328442825,
+        "avg_runners_on": 0.32681755955487135,
+        "prob_bases_empty": 0.5335090234302831,
+        "delta_vs_avg": 0.0013121840927761141,
+        "delta_vs_primary": -0.0010018821790325205,
+        "fit_rank": 4
+      },
+      {
+        "slot": 6,
+        "expected_runs": 5.450043227069266,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.09729055450675364,
+        "expected_pa_162": 693.4034857451163,
+        "prob_two_out": 0.2635722288738038,
+        "prob_risp": 0.06321056424789828,
+        "prob_runners_on": 0.463215050631826,
+        "expected_pa": 4.2802684305254095,
+        "avg_runners_on": 0.3243351720757108,
+        "prob_bases_empty": 0.536784949368174,
+        "delta_vs_avg": 0.0008339773888392799,
+        "delta_vs_primary": -0.0014800888829693548,
+        "fit_rank": 5
+      },
+      {
+        "slot": 7,
+        "expected_runs": 5.445837762618632,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.10274763155831165,
+        "expected_pa_162": 675.3524783796064,
+        "prob_two_out": 0.2841738880067573,
+        "prob_risp": 0.06227763168145203,
+        "prob_runners_on": 0.4537617263696969,
+        "expected_pa": 4.168842459133373,
+        "avg_runners_on": 0.3083149262692528,
+        "prob_bases_empty": 0.5462382736303031,
+        "delta_vs_avg": -0.0033714870617940207,
+        "delta_vs_primary": -0.005685553333602655,
+        "fit_rank": 7
+      },
+      {
+        "slot": 8,
+        "expected_runs": 5.444537508434485,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.10251587556256597,
+        "expected_pa_162": 657.0041468789536,
+        "prob_two_out": 0.2825440709383125,
+        "prob_risp": 0.066102627233342,
+        "prob_runners_on": 0.4564075471528199,
+        "expected_pa": 4.0555811535737885,
+        "avg_runners_on": 0.3178985117961646,
+        "prob_bases_empty": 0.5435924528471802,
+        "delta_vs_avg": -0.004671741245941163,
+        "delta_vs_primary": -0.006985807517749798,
+        "fit_rank": 8
+      },
+      {
+        "slot": 9,
+        "expected_runs": 5.444171070258484,
+        "weight_games": 46.0,
+        "prob_lead_inning": 0.09845234823874208,
+        "expected_pa_162": 638.0467876847871,
+        "prob_two_out": 0.28337597538678105,
+        "prob_risp": 0.0647755420187583,
+        "prob_runners_on": 0.4510591398796204,
+        "expected_pa": 3.9385604178073272,
+        "avg_runners_on": 0.3134801534945019,
+        "prob_bases_empty": 0.5489408601203796,
+        "delta_vs_avg": -0.005038179421942068,
+        "delta_vs_primary": -0.007352245693750703,
+        "fit_rank": 9
+      }
+    ],
+    "note": "Batting order changes both the game states a hitter encounters and the number of plate appearances he receives."
+  },
+  "why_this_slot": [
+    {
+      "id": "best",
+      "text": "Best modeled placement for Will Smith is slot #1 (5.454 expected team runs/game)."
+    },
+    {
+      "id": "equivalence",
+      "text": "Slots #1, #2, #3, #5, #6, #4, #7, #8 are within 0.01 runs/game of each other \u2014 essentially equivalent under the model\u2019s operational band."
+    },
+    {
+      "id": "tiny_gap",
+      "text": "Difference between #1 and #2: 0.003 R/G."
+    },
+    {
+      "id": "opportunity",
+      "text": "Primary actual slot #3 ranks 3 of 9; estimated placement opportunity vs best is +0.003 R/G."
+    },
+    {
+      "id": "pa_allocation",
+      "text": "Slot #1 yields 4.83 expected PA/game vs 4.60 at primary slot #3. Batting order changes both game states and plate appearances."
+    },
+    {
+      "id": "runners_on",
+      "text": "Runner-on exposure: 36% at #1 vs 48% at #3."
+    },
+    {
+      "id": "profile",
+      "text": "Offensive profile group: Power (exploratory unsupervised cluster \u2014 not a definitive archetype)."
+    }
+  ],
+  "observed_slot_splits": [
+    {
+      "player_id": 669257,
+      "slot": 1,
+      "pa": 4,
+      "starts": 1,
+      "metrics": {
+        "woba": {
+          "mlb": {
+            "value": 0.6725,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "woba",
+            "display": "0.672",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 4.0
+          }
+        },
+        "obp": {
+          "mlb": {
+            "value": 0.5,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "obp",
+            "display": "0.500",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 4.0
+          }
+        },
+        "slg": {
+          "mlb": {
+            "value": 1.0,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "slg",
+            "display": "1.000",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 4.0
+          }
+        },
+        "iso": {
+          "mlb": {
+            "value": 0.75,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "iso",
+            "display": "0.750",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 4.0
+          }
+        },
+        "k_pct": {
+          "mlb": {
+            "value": 0.5,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "lower_better",
+            "qualified": false,
+            "metric": "k_pct",
+            "display": "50.0%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 4.0
+          }
+        },
+        "bb_pct": {
+          "mlb": {
+            "value": 0.25,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "bb_pct",
+            "display": "25.0%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 4.0
+          }
+        }
+      },
+      "raw": {
+        "woba": 0.6725,
+        "obp": 0.5,
+        "slg": 1.0,
+        "iso": 0.75,
+        "k_pct": 0.5,
+        "bb_pct": 0.25
+      },
+      "label": "Observed performance \u2014 descriptive, not estimated causal slot effect."
+    },
+    {
+      "player_id": 669257,
+      "slot": 2,
+      "pa": 8,
+      "starts": 2,
+      "metrics": {
+        "woba": {
+          "mlb": {
+            "value": 0.0,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "woba",
+            "display": "0.000",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 8.0
+          }
+        },
+        "obp": {
+          "mlb": {
+            "value": 0.0,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "obp",
+            "display": "0.000",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 8.0
+          }
+        },
+        "slg": {
+          "mlb": {
+            "value": 0.0,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "slg",
+            "display": "0.000",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 8.0
+          }
+        },
+        "iso": {
+          "mlb": {
+            "value": 0.0,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "iso",
+            "display": "0.000",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 8.0
+          }
+        },
+        "k_pct": {
+          "mlb": {
+            "value": 0.375,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "lower_better",
+            "qualified": false,
+            "metric": "k_pct",
+            "display": "37.5%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 8.0
+          }
+        },
+        "bb_pct": {
+          "mlb": {
+            "value": 0.0,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "bb_pct",
+            "display": "0.0%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 8.0
+          }
+        }
+      },
+      "raw": {
+        "woba": 0.0,
+        "obp": 0.0,
+        "slg": 0.0,
+        "iso": 0.0,
+        "k_pct": 0.375,
+        "bb_pct": 0.0
+      },
+      "label": "Observed performance \u2014 descriptive, not estimated causal slot effect."
+    },
+    {
+      "player_id": 669257,
+      "slot": 3,
+      "pa": 89,
+      "starts": 20,
+      "metrics": {
+        "woba": {
+          "mlb": {
+            "value": 0.3024719101123595,
+            "rank": 81,
+            "population_n": 116,
+            "percentile": 31,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "woba",
+            "display": "0.302",
+            "note": null,
+            "sample_size": 89.0
+          }
+        },
+        "obp": {
+          "mlb": {
+            "value": 0.33707865168539325,
+            "rank": 48,
+            "population_n": 116,
+            "percentile": 59,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "obp",
+            "display": "0.337",
+            "note": null,
+            "sample_size": 89.0
+          }
+        },
+        "slg": {
+          "mlb": {
+            "value": 0.30337078651685395,
+            "rank": 92,
+            "population_n": 116,
+            "percentile": 22,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "slg",
+            "display": "0.303",
+            "note": null,
+            "sample_size": 89.0
+          }
+        },
+        "iso": {
+          "mlb": {
+            "value": 0.06741573033707865,
+            "rank": 106,
+            "population_n": 116,
+            "percentile": 9,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "iso",
+            "display": "0.067",
+            "note": null,
+            "sample_size": 89.0
+          }
+        },
+        "k_pct": {
+          "mlb": {
+            "value": 0.14606741573033707,
+            "rank": 25,
+            "population_n": 116,
+            "percentile": 79,
+            "qualifying_threshold": 30,
+            "direction": "lower_better",
+            "qualified": true,
+            "metric": "k_pct",
+            "display": "14.6%",
+            "note": null,
+            "sample_size": 89.0
+          }
+        },
+        "bb_pct": {
+          "mlb": {
+            "value": 0.10112359550561797,
+            "rank": 63,
+            "population_n": 116,
+            "percentile": 47,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "bb_pct",
+            "display": "10.1%",
+            "note": null,
+            "sample_size": 89.0
+          }
+        }
+      },
+      "raw": {
+        "woba": 0.3024719101123595,
+        "obp": 0.33707865168539325,
+        "slg": 0.30337078651685395,
+        "iso": 0.06741573033707865,
+        "k_pct": 0.14606741573033707,
+        "bb_pct": 0.10112359550561797
+      },
+      "label": "Observed performance \u2014 descriptive, not estimated causal slot effect."
+    },
+    {
+      "player_id": 669257,
+      "slot": 4,
+      "pa": 9,
+      "starts": 2,
+      "metrics": {
+        "woba": {
+          "mlb": {
+            "value": 0.47333333333333333,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "woba",
+            "display": "0.473",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 9.0
+          }
+        },
+        "obp": {
+          "mlb": {
+            "value": 0.4444444444444444,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "obp",
+            "display": "0.444",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 9.0
+          }
+        },
+        "slg": {
+          "mlb": {
+            "value": 0.5555555555555556,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "slg",
+            "display": "0.556",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 9.0
+          }
+        },
+        "iso": {
+          "mlb": {
+            "value": 0.3333333333333333,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "iso",
+            "display": "0.333",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 9.0
+          }
+        },
+        "k_pct": {
+          "mlb": {
+            "value": 0.2222222222222222,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "lower_better",
+            "qualified": false,
+            "metric": "k_pct",
+            "display": "22.2%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 9.0
+          }
+        },
+        "bb_pct": {
+          "mlb": {
+            "value": 0.2222222222222222,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "bb_pct",
+            "display": "22.2%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 9.0
+          }
+        }
+      },
+      "raw": {
+        "woba": 0.47333333333333333,
+        "obp": 0.4444444444444444,
+        "slg": 0.5555555555555556,
+        "iso": 0.3333333333333333,
+        "k_pct": 0.2222222222222222,
+        "bb_pct": 0.2222222222222222
+      },
+      "label": "Observed performance \u2014 descriptive, not estimated causal slot effect."
+    },
+    {
+      "player_id": 669257,
+      "slot": 5,
+      "pa": 50,
+      "starts": 12,
+      "metrics": {
+        "woba": {
+          "mlb": {
+            "value": 0.2786,
+            "rank": 106,
+            "population_n": 158,
+            "percentile": 34,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "woba",
+            "display": "0.279",
+            "note": null,
+            "sample_size": 50.0
+          }
+        },
+        "obp": {
+          "mlb": {
+            "value": 0.3,
+            "rank": 90,
+            "population_n": 158,
+            "percentile": 44,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "obp",
+            "display": "0.300",
+            "note": null,
+            "sample_size": 50.0
+          }
+        },
+        "slg": {
+          "mlb": {
+            "value": 0.3,
+            "rank": 106,
+            "population_n": 158,
+            "percentile": 34,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "slg",
+            "display": "0.300",
+            "note": null,
+            "sample_size": 50.0
+          }
+        },
+        "iso": {
+          "mlb": {
+            "value": 0.08,
+            "rank": 114,
+            "population_n": 158,
+            "percentile": 28,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "iso",
+            "display": "0.080",
+            "note": null,
+            "sample_size": 50.0
+          }
+        },
+        "k_pct": {
+          "mlb": {
+            "value": 0.14,
+            "rank": 29,
+            "population_n": 158,
+            "percentile": 82,
+            "qualifying_threshold": 30,
+            "direction": "lower_better",
+            "qualified": true,
+            "metric": "k_pct",
+            "display": "14.0%",
+            "note": null,
+            "sample_size": 50.0
+          }
+        },
+        "bb_pct": {
+          "mlb": {
+            "value": 0.08,
+            "rank": 99,
+            "population_n": 158,
+            "percentile": 38,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": true,
+            "metric": "bb_pct",
+            "display": "8.0%",
+            "note": null,
+            "sample_size": 50.0
+          }
+        }
+      },
+      "raw": {
+        "woba": 0.2786,
+        "obp": 0.3,
+        "slg": 0.3,
+        "iso": 0.08,
+        "k_pct": 0.14,
+        "bb_pct": 0.08
+      },
+      "label": "Observed performance \u2014 descriptive, not estimated causal slot effect."
+    },
+    {
+      "player_id": 669257,
+      "slot": 6,
+      "pa": 11,
+      "starts": 3,
+      "metrics": {
+        "woba": {
+          "mlb": {
+            "value": 0.20545454545454545,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "woba",
+            "display": "0.205",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 11.0
+          }
+        },
+        "obp": {
+          "mlb": {
+            "value": 0.2727272727272727,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "obp",
+            "display": "0.273",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 11.0
+          }
+        },
+        "slg": {
+          "mlb": {
+            "value": 0.09090909090909091,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "slg",
+            "display": "0.091",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 11.0
+          }
+        },
+        "iso": {
+          "mlb": {
+            "value": 0.0,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "iso",
+            "display": "0.000",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 11.0
+          }
+        },
+        "k_pct": {
+          "mlb": {
+            "value": 0.36363636363636365,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "lower_better",
+            "qualified": false,
+            "metric": "k_pct",
+            "display": "36.4%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 11.0
+          }
+        },
+        "bb_pct": {
+          "mlb": {
+            "value": 0.18181818181818182,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "bb_pct",
+            "display": "18.2%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 11.0
+          }
+        }
+      },
+      "raw": {
+        "woba": 0.20545454545454545,
+        "obp": 0.2727272727272727,
+        "slg": 0.09090909090909091,
+        "iso": 0.0,
+        "k_pct": 0.36363636363636365,
+        "bb_pct": 0.18181818181818182
+      },
+      "label": "Observed performance \u2014 descriptive, not estimated causal slot effect."
+    },
+    {
+      "player_id": 669257,
+      "slot": 7,
+      "pa": 24,
+      "starts": 6,
+      "metrics": {
+        "woba": {
+          "mlb": {
+            "value": 0.4725,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "woba",
+            "display": "0.472",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 24.0
+          }
+        },
+        "obp": {
+          "mlb": {
+            "value": 0.4583333333333333,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "obp",
+            "display": "0.458",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 24.0
+          }
+        },
+        "slg": {
+          "mlb": {
+            "value": 0.5416666666666666,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "slg",
+            "display": "0.542",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 24.0
+          }
+        },
+        "iso": {
+          "mlb": {
+            "value": 0.2916666666666667,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "iso",
+            "display": "0.292",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 24.0
+          }
+        },
+        "k_pct": {
+          "mlb": {
+            "value": 0.08333333333333333,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "lower_better",
+            "qualified": false,
+            "metric": "k_pct",
+            "display": "8.3%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 24.0
+          }
+        },
+        "bb_pct": {
+          "mlb": {
+            "value": 0.20833333333333334,
+            "rank": null,
+            "population_n": null,
+            "percentile": null,
+            "qualifying_threshold": 30,
+            "direction": "higher_better",
+            "qualified": false,
+            "metric": "bb_pct",
+            "display": "20.8%",
+            "note": "Limited sample \u2014 rank unavailable",
+            "sample_size": 24.0
+          }
+        }
+      },
+      "raw": {
+        "woba": 0.4725,
+        "obp": 0.4583333333333333,
+        "slg": 0.5416666666666666,
+        "iso": 0.2916666666666667,
+        "k_pct": 0.08333333333333333,
+        "bb_pct": 0.20833333333333334
+      },
+      "label": "Observed performance \u2014 descriptive, not estimated causal slot effect."
+    }
+  ],
+  "platoon_slot_fit": {
+    "neutral": {
+      "best_slot": 1,
+      "near_equivalent_slots": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        4,
+        7,
+        8
+      ],
+      "placement_opportunity": 0.00290552824278123,
+      "n_starts": 46
+    }
+  },
+  "lineup_neighbors": {
+    "before": [
+      {
+        "player_id": 663656,
+        "name": "Kyle Tucker",
+        "n_adjacent_starts": 17,
+        "offensive_profile": "Balanced",
+        "association": {
+          "effect": -0.017102916434754867,
+          "n": 54,
+          "reliability_tier": "moderate",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 518692,
+        "name": "Freddie Freeman",
+        "n_adjacent_starts": 16,
+        "offensive_profile": "Power",
+        "association": {
+          "effect": -0.006875576609172637,
+          "n": 421,
+          "reliability_tier": "strong",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 605141,
+        "name": "Mookie Betts",
+        "n_adjacent_starts": 3,
+        "offensive_profile": "Balanced",
+        "association": {
+          "effect": -0.012442735365091925,
+          "n": 84,
+          "reliability_tier": "moderate",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 571970,
+        "name": "Max Muncy",
+        "n_adjacent_starts": 3,
+        "offensive_profile": "Three True Outcomes",
+        "association": {
+          "effect": -0.03188794183748425,
+          "n": 62,
+          "reliability_tier": "moderate",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 606192,
+        "name": "Teoscar Hern\u00e1ndez",
+        "n_adjacent_starts": 3,
+        "offensive_profile": "Power",
+        "association": {
+          "effect": -0.010758911665002669,
+          "n": 85,
+          "reliability_tier": "moderate",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 669743,
+        "name": "Alex Call",
+        "n_adjacent_starts": 1,
+        "offensive_profile": "Spray Contact",
+        "association": {
+          "effect": 0.019049351258801694,
+          "n": 8,
+          "reliability_tier": "limited",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 660271,
+        "name": "Shohei Ohtani",
+        "n_adjacent_starts": 1,
+        "offensive_profile": "Three True Outcomes",
+        "association": {
+          "effect": -0.0017958852533855043,
+          "n": 153,
+          "reliability_tier": "strong",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 681624,
+        "name": "Andy Pages",
+        "n_adjacent_starts": 1,
+        "offensive_profile": "Power",
+        "association": {
+          "effect": 0.03214295296040107,
+          "n": 15,
+          "reliability_tier": "limited",
+          "label": "Exploratory residual association"
+        }
+      }
+    ],
+    "after": [
+      {
+        "player_id": 571970,
+        "name": "Max Muncy",
+        "n_adjacent_starts": 13,
+        "offensive_profile": "Three True Outcomes",
+        "association": {
+          "effect": -0.006975035669579569,
+          "n": 267,
+          "reliability_tier": "strong",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 518692,
+        "name": "Freddie Freeman",
+        "n_adjacent_starts": 11,
+        "offensive_profile": "Power",
+        "association": {
+          "effect": 0.02287014044014117,
+          "n": 224,
+          "reliability_tier": "strong",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 663656,
+        "name": "Kyle Tucker",
+        "n_adjacent_starts": 8,
+        "offensive_profile": "Balanced",
+        "association": {
+          "effect": 0.009311669099678566,
+          "n": 23,
+          "reliability_tier": "limited",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 606192,
+        "name": "Teoscar Hern\u00e1ndez",
+        "n_adjacent_starts": 6,
+        "offensive_profile": "Power",
+        "association": {
+          "effect": -0.004511418759490528,
+          "n": 192,
+          "reliability_tier": "strong",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 669743,
+        "name": "Alex Call",
+        "n_adjacent_starts": 4,
+        "offensive_profile": "Spray Contact",
+        "association": {
+          "effect": 0.03128219107696753,
+          "n": 14,
+          "reliability_tier": "limited",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 500743,
+        "name": "Miguel Rojas",
+        "n_adjacent_starts": 2,
+        "offensive_profile": "Spray Contact",
+        "association": {
+          "effect": 0.04053967100579292,
+          "n": 24,
+          "reliability_tier": "limited",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 681624,
+        "name": "Andy Pages",
+        "n_adjacent_starts": 1,
+        "offensive_profile": "Power",
+        "association": {
+          "effect": 0.07137153110347308,
+          "n": 31,
+          "reliability_tier": "limited",
+          "label": "Exploratory residual association"
+        }
+      },
+      {
+        "player_id": 808975,
+        "name": "Hyeseong Kim",
+        "n_adjacent_starts": 1,
+        "offensive_profile": "Spray Contact",
+        "association": null
+      }
+    ],
+    "note": "Neighbor counts are starting-lineup adjacency; pair effects are exploratory."
+  },
+  "method": "same_nine_relative_order_insertion; equivalence_eps=0.01; Markov LineupEngine with_flow",
+  "qualification": {
+    "overall_min_pa": 100,
+    "platoon_min_pa": 50,
+    "slot_min_pa": 30,
+    "slot_equivalence_eps": 0.01
+  }
+}

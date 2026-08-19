@@ -1,0 +1,434 @@
+{
+  "available": true,
+  "player_id": 801126,
+  "name": "Brock Rodden",
+  "data_cutoff": "2026-08-17",
+  "season": 2026,
+  "offensive_profile": {
+    "label": null,
+    "display_name": "Offensive profile",
+    "tooltip": "Exploratory profile group derived from unsupervised clustering of hitter characteristics."
+  },
+  "summary": {
+    "primary_actual_slot": 9,
+    "best_modeled_slot": 9,
+    "placement_opportunity": 0.0,
+    "actual_slot_fit_rank": 1,
+    "near_equivalent_slots": [
+      9,
+      8,
+      6,
+      7
+    ],
+    "best_context": "Neutral",
+    "offensive_profile": null,
+    "actual_usage_fit": {
+      "avg_slot_rank": 1.0,
+      "avg_opportunity_gap": 0.0,
+      "pct_top1": 1.0,
+      "pct_top3": 1.0,
+      "pct_within_01": 1.0,
+      "pct_within_02": 1.0,
+      "n_starts": 3
+    }
+  },
+  "season_metrics": {},
+  "slot_usage": {
+    "9": 3
+  },
+  "modeled_slot_fit": {
+    "neutral": {
+      "slots": [
+        {
+          "slot": 1,
+          "expected_runs": 4.779907070414885,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.20100000686115502,
+          "expected_pa_162": 766.1646086137611,
+          "prob_two_out": 0.22636424290800514,
+          "prob_risp": 0.051755238615368716,
+          "prob_runners_on": 0.3661147256709687,
+          "expected_pa": 4.729411164282475,
+          "avg_runners_on": 0.2521979712835091,
+          "prob_bases_empty": 0.6338852743290313,
+          "delta_vs_avg": -0.007814681613425911,
+          "delta_vs_primary": -0.017411446284853582,
+          "fit_rank": 9
+        },
+        {
+          "slot": 2,
+          "expected_runs": 4.78005632520223,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.0895552002922914,
+          "expected_pa_162": 747.0607126085109,
+          "prob_two_out": 0.21582265011007584,
+          "prob_risp": 0.051617334209417554,
+          "prob_runners_on": 0.43316218244501653,
+          "expected_pa": 4.61148588029945,
+          "avg_runners_on": 0.2985662482495159,
+          "prob_bases_empty": 0.5668378175549834,
+          "delta_vs_avg": -0.007665426826081401,
+          "delta_vs_primary": -0.017262191497509072,
+          "fit_rank": 8
+        },
+        {
+          "slot": 3,
+          "expected_runs": 4.782566559183551,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.08465867514711045,
+          "expected_pa_162": 728.9599282675678,
+          "prob_two_out": 0.2998245253835195,
+          "prob_risp": 0.06311741954447424,
+          "prob_runners_on": 0.47065534662606884,
+          "expected_pa": 4.499752643626962,
+          "avg_runners_on": 0.3257781888350674,
+          "prob_bases_empty": 0.5293446533739311,
+          "delta_vs_avg": -0.005155192844759959,
+          "delta_vs_primary": -0.01475195751618763,
+          "fit_rank": 7
+        },
+        {
+          "slot": 4,
+          "expected_runs": 4.783997906193549,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.12485925178066022,
+          "expected_pa_162": 711.0501793461982,
+          "prob_two_out": 0.2791622334179056,
+          "prob_risp": 0.08193803613096119,
+          "prob_runners_on": 0.47382619895255623,
+          "expected_pa": 4.389198637939495,
+          "avg_runners_on": 0.3457822052580082,
+          "prob_bases_empty": 0.5261738010474438,
+          "delta_vs_avg": -0.0037238458347621517,
+          "delta_vs_primary": -0.013320610506189823,
+          "fit_rank": 6
+        },
+        {
+          "slot": 5,
+          "expected_runs": 4.786945371730522,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.11276098858567167,
+          "expected_pa_162": 693.8849967981869,
+          "prob_two_out": 0.2630697187095183,
+          "prob_risp": 0.07261651189676667,
+          "prob_runners_on": 0.43681413112574224,
+          "expected_pa": 4.283240720976463,
+          "avg_runners_on": 0.3176826352954712,
+          "prob_bases_empty": 0.5631858688742578,
+          "delta_vs_avg": -0.0007763802977889256,
+          "delta_vs_primary": -0.010373144969216597,
+          "fit_rank": 5
+        },
+        {
+          "slot": 6,
+          "expected_runs": 4.791343078793716,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.0959910584937006,
+          "expected_pa_162": 676.9979912661964,
+          "prob_two_out": 0.2812928982248706,
+          "prob_risp": 0.057360255085235186,
+          "prob_runners_on": 0.4409643028491737,
+          "expected_pa": 4.1789999460876315,
+          "avg_runners_on": 0.30563687221177577,
+          "prob_bases_empty": 0.5590356971508262,
+          "delta_vs_avg": 0.003621326765404831,
+          "delta_vs_primary": -0.00597543790602284,
+          "fit_rank": 3
+        },
+        {
+          "slot": 7,
+          "expected_runs": 4.790934525984672,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.09866625679539404,
+          "expected_pa_162": 659.6425397060619,
+          "prob_two_out": 0.2648526206176052,
+          "prob_risp": 0.06236442715377425,
+          "prob_runners_on": 0.4736888822587228,
+          "expected_pa": 4.071867529049765,
+          "avg_runners_on": 0.32209304719819426,
+          "prob_bases_empty": 0.5263111177412771,
+          "delta_vs_avg": 0.0032127739563607705,
+          "delta_vs_primary": -0.006383990715066901,
+          "fit_rank": 4
+        },
+        {
+          "slot": 8,
+          "expected_runs": 4.79642641405194,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.09700610961349239,
+          "expected_pa_162": 642.0420600823194,
+          "prob_two_out": 0.2870398370046268,
+          "prob_risp": 0.06730674124473325,
+          "prob_runners_on": 0.44492393196674856,
+          "expected_pa": 3.9632225931007365,
+          "avg_runners_on": 0.31320879113089395,
+          "prob_bases_empty": 0.5550760680332515,
+          "delta_vs_avg": 0.008704662023628629,
+          "delta_vs_primary": -0.0008921026477990424,
+          "fit_rank": 2
+        },
+        {
+          "slot": 9,
+          "expected_runs": 4.797318516699739,
+          "weight_games": 3.0,
+          "prob_lead_inning": 0.09383889741178664,
+          "expected_pa_162": 623.4148419723546,
+          "prob_two_out": 0.28289618664442767,
+          "prob_risp": 0.06728508372443133,
+          "prob_runners_on": 0.4621442416050758,
+          "expected_pa": 3.848239765261448,
+          "avg_runners_on": 0.32053832999499327,
+          "prob_bases_empty": 0.5378557583949242,
+          "delta_vs_avg": 0.009596764671427671,
+          "delta_vs_primary": 0.0,
+          "fit_rank": 1
+        }
+      ],
+      "best_slot": 9,
+      "best_expected_runs": 4.797318516699739,
+      "near_equivalent_slots": [
+        9,
+        8,
+        6,
+        7
+      ],
+      "near_equivalent_slots_02": [
+        9,
+        8,
+        6,
+        7,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "primary_slot": 9,
+      "primary_expected_runs": 4.797318516699739,
+      "primary_fit_rank": 1,
+      "placement_opportunity": 0.0,
+      "avg_placement_runs": 4.787721752028311,
+      "equivalence_eps": 0.01,
+      "n_starts": 3,
+      "n_personnel_groups": 2,
+      "actual_usage_fit": {
+        "avg_slot_rank": 1.0,
+        "avg_opportunity_gap": 0.0,
+        "pct_top1": 1.0,
+        "pct_top3": 1.0,
+        "pct_within_01": 1.0,
+        "pct_within_02": 1.0,
+        "n_starts": 3
+      }
+    }
+  },
+  "run_opportunity_profile": {
+    "context": "neutral",
+    "slots": [
+      {
+        "slot": 1,
+        "expected_runs": 4.779907070414885,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.20100000686115502,
+        "expected_pa_162": 766.1646086137611,
+        "prob_two_out": 0.22636424290800514,
+        "prob_risp": 0.051755238615368716,
+        "prob_runners_on": 0.3661147256709687,
+        "expected_pa": 4.729411164282475,
+        "avg_runners_on": 0.2521979712835091,
+        "prob_bases_empty": 0.6338852743290313,
+        "delta_vs_avg": -0.007814681613425911,
+        "delta_vs_primary": -0.017411446284853582,
+        "fit_rank": 9
+      },
+      {
+        "slot": 2,
+        "expected_runs": 4.78005632520223,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.0895552002922914,
+        "expected_pa_162": 747.0607126085109,
+        "prob_two_out": 0.21582265011007584,
+        "prob_risp": 0.051617334209417554,
+        "prob_runners_on": 0.43316218244501653,
+        "expected_pa": 4.61148588029945,
+        "avg_runners_on": 0.2985662482495159,
+        "prob_bases_empty": 0.5668378175549834,
+        "delta_vs_avg": -0.007665426826081401,
+        "delta_vs_primary": -0.017262191497509072,
+        "fit_rank": 8
+      },
+      {
+        "slot": 3,
+        "expected_runs": 4.782566559183551,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.08465867514711045,
+        "expected_pa_162": 728.9599282675678,
+        "prob_two_out": 0.2998245253835195,
+        "prob_risp": 0.06311741954447424,
+        "prob_runners_on": 0.47065534662606884,
+        "expected_pa": 4.499752643626962,
+        "avg_runners_on": 0.3257781888350674,
+        "prob_bases_empty": 0.5293446533739311,
+        "delta_vs_avg": -0.005155192844759959,
+        "delta_vs_primary": -0.01475195751618763,
+        "fit_rank": 7
+      },
+      {
+        "slot": 4,
+        "expected_runs": 4.783997906193549,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.12485925178066022,
+        "expected_pa_162": 711.0501793461982,
+        "prob_two_out": 0.2791622334179056,
+        "prob_risp": 0.08193803613096119,
+        "prob_runners_on": 0.47382619895255623,
+        "expected_pa": 4.389198637939495,
+        "avg_runners_on": 0.3457822052580082,
+        "prob_bases_empty": 0.5261738010474438,
+        "delta_vs_avg": -0.0037238458347621517,
+        "delta_vs_primary": -0.013320610506189823,
+        "fit_rank": 6
+      },
+      {
+        "slot": 5,
+        "expected_runs": 4.786945371730522,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.11276098858567167,
+        "expected_pa_162": 693.8849967981869,
+        "prob_two_out": 0.2630697187095183,
+        "prob_risp": 0.07261651189676667,
+        "prob_runners_on": 0.43681413112574224,
+        "expected_pa": 4.283240720976463,
+        "avg_runners_on": 0.3176826352954712,
+        "prob_bases_empty": 0.5631858688742578,
+        "delta_vs_avg": -0.0007763802977889256,
+        "delta_vs_primary": -0.010373144969216597,
+        "fit_rank": 5
+      },
+      {
+        "slot": 6,
+        "expected_runs": 4.791343078793716,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.0959910584937006,
+        "expected_pa_162": 676.9979912661964,
+        "prob_two_out": 0.2812928982248706,
+        "prob_risp": 0.057360255085235186,
+        "prob_runners_on": 0.4409643028491737,
+        "expected_pa": 4.1789999460876315,
+        "avg_runners_on": 0.30563687221177577,
+        "prob_bases_empty": 0.5590356971508262,
+        "delta_vs_avg": 0.003621326765404831,
+        "delta_vs_primary": -0.00597543790602284,
+        "fit_rank": 3
+      },
+      {
+        "slot": 7,
+        "expected_runs": 4.790934525984672,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.09866625679539404,
+        "expected_pa_162": 659.6425397060619,
+        "prob_two_out": 0.2648526206176052,
+        "prob_risp": 0.06236442715377425,
+        "prob_runners_on": 0.4736888822587228,
+        "expected_pa": 4.071867529049765,
+        "avg_runners_on": 0.32209304719819426,
+        "prob_bases_empty": 0.5263111177412771,
+        "delta_vs_avg": 0.0032127739563607705,
+        "delta_vs_primary": -0.006383990715066901,
+        "fit_rank": 4
+      },
+      {
+        "slot": 8,
+        "expected_runs": 4.79642641405194,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.09700610961349239,
+        "expected_pa_162": 642.0420600823194,
+        "prob_two_out": 0.2870398370046268,
+        "prob_risp": 0.06730674124473325,
+        "prob_runners_on": 0.44492393196674856,
+        "expected_pa": 3.9632225931007365,
+        "avg_runners_on": 0.31320879113089395,
+        "prob_bases_empty": 0.5550760680332515,
+        "delta_vs_avg": 0.008704662023628629,
+        "delta_vs_primary": -0.0008921026477990424,
+        "fit_rank": 2
+      },
+      {
+        "slot": 9,
+        "expected_runs": 4.797318516699739,
+        "weight_games": 3.0,
+        "prob_lead_inning": 0.09383889741178664,
+        "expected_pa_162": 623.4148419723546,
+        "prob_two_out": 0.28289618664442767,
+        "prob_risp": 0.06728508372443133,
+        "prob_runners_on": 0.4621442416050758,
+        "expected_pa": 3.848239765261448,
+        "avg_runners_on": 0.32053832999499327,
+        "prob_bases_empty": 0.5378557583949242,
+        "delta_vs_avg": 0.009596764671427671,
+        "delta_vs_primary": 0.0,
+        "fit_rank": 1
+      }
+    ],
+    "note": "Batting order changes both the game states a hitter encounters and the number of plate appearances he receives."
+  },
+  "why_this_slot": [
+    {
+      "id": "best",
+      "text": "Best modeled placement for Brock Rodden is slot #9 (4.797 expected team runs/game)."
+    },
+    {
+      "id": "equivalence",
+      "text": "Slots #9, #8, #6, #7 are within 0.01 runs/game of each other \u2014 essentially equivalent under the model\u2019s operational band."
+    },
+    {
+      "id": "tiny_gap",
+      "text": "Difference between #9 and #8: 0.001 R/G."
+    },
+    {
+      "id": "avoid_cleanup",
+      "text": "Cleanup (#4) models -0.004 R/G vs his average placement \u2014 typically less value than mid/lower-order spots when power/run-production profiles are modest relative to the nine."
+    }
+  ],
+  "observed_slot_splits": [],
+  "platoon_slot_fit": {
+    "neutral": {
+      "best_slot": 9,
+      "near_equivalent_slots": [
+        9,
+        8,
+        6,
+        7
+      ],
+      "placement_opportunity": 0.0,
+      "n_starts": 3
+    }
+  },
+  "lineup_neighbors": {
+    "before": [
+      {
+        "player_id": 645302,
+        "name": "Victor Robles",
+        "n_adjacent_starts": 2,
+        "offensive_profile": "Spray Contact",
+        "association": null
+      },
+      {
+        "player_id": 642215,
+        "name": "Weston Wilson",
+        "n_adjacent_starts": 1,
+        "offensive_profile": "Balanced",
+        "association": null
+      }
+    ],
+    "after": [],
+    "note": "Neighbor counts are starting-lineup adjacency; pair effects are exploratory."
+  },
+  "method": "same_nine_relative_order_insertion; equivalence_eps=0.01; Markov LineupEngine with_flow",
+  "qualification": {
+    "overall_min_pa": 100,
+    "platoon_min_pa": 50,
+    "slot_min_pa": 30,
+    "slot_equivalence_eps": 0.01
+  }
+}

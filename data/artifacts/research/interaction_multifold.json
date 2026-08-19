@@ -1,0 +1,384 @@
+{
+  "folds": [
+    {
+      "train_season": 2024,
+      "valid_season": 2025,
+      "models": [
+        {
+          "model": "m1_talent",
+          "n_train": 141600,
+          "n_valid": 129452,
+          "train_season": 2024,
+          "valid_season": 2025,
+          "talent_feature_season": 2024,
+          "rmse": 0.506864440084722,
+          "rmse_lift_vs_m1": 0.0,
+          "logloss_reached": 0.6931617179370437,
+          "logloss_lift_vs_m1": 0.0,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season"
+          ]
+        },
+        {
+          "model": "m2_slot",
+          "n_train": 141600,
+          "n_valid": 129452,
+          "train_season": 2024,
+          "valid_season": 2025,
+          "talent_feature_season": 2024,
+          "rmse": 0.5069913223516971,
+          "rmse_lift_vs_m1": -0.00012688226697510352,
+          "logloss_reached": 0.6906535896547482,
+          "logloss_lift_vs_m1": 0.0025081282822955187,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot"
+          ]
+        },
+        {
+          "model": "m3_state",
+          "n_train": 141600,
+          "n_valid": 129452,
+          "train_season": 2024,
+          "valid_season": 2025,
+          "talent_feature_season": 2024,
+          "rmse": 0.5069073539533385,
+          "rmse_lift_vs_m1": -4.2913868616545336e-05,
+          "logloss_reached": 0.6691971476212674,
+          "logloss_lift_vs_m1": 0.023964570315776368,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot",
+            "outs_start",
+            "bases_start"
+          ]
+        },
+        {
+          "model": "m4_prev_feats",
+          "n_train": 141599,
+          "n_valid": 118608,
+          "train_season": 2024,
+          "valid_season": 2025,
+          "talent_feature_season": 2024,
+          "rmse": 0.5082869608268368,
+          "rmse_lift_vs_m1": -0.0014225207421147967,
+          "logloss_reached": 0.6657076980941288,
+          "logloss_lift_vs_m1": 0.027454019842914956,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso",
+            "prev_woba",
+            "prev_k",
+            "prev_bb",
+            "prev_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot",
+            "outs_start",
+            "bases_start",
+            "prev_outcome"
+          ]
+        },
+        {
+          "model": "m5_arch_interact",
+          "n_train": 141599,
+          "n_valid": 118608,
+          "train_season": 2024,
+          "valid_season": 2025,
+          "talent_feature_season": 2024,
+          "rmse": 0.5082869608268368,
+          "rmse_lift_vs_m1": -0.0014225207421147967,
+          "logloss_reached": 0.7196585912347349,
+          "logloss_lift_vs_m1": -0.026496873297691126,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso",
+            "prev_woba",
+            "prev_k",
+            "prev_bb",
+            "prev_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot",
+            "outs_start",
+            "bases_start",
+            "prev_outcome",
+            "arch_pair"
+          ]
+        }
+      ],
+      "m5_vs_m1_rmse_lift": -0.0014225207421147967,
+      "m5_vs_m4_rmse_lift": 0.0,
+      "m5_vs_m1_logloss_lift": -0.026496873297691126,
+      "m5_vs_m4_logloss_lift": -0.05395089314060608
+    },
+    {
+      "train_season": 2025,
+      "valid_season": 2026,
+      "models": [
+        {
+          "model": "m1_talent",
+          "n_train": 142391,
+          "n_valid": 95436,
+          "train_season": 2025,
+          "valid_season": 2026,
+          "talent_feature_season": 2025,
+          "rmse": 0.5053189037858002,
+          "rmse_lift_vs_m1": 0.0,
+          "logloss_reached": 0.6980360469126486,
+          "logloss_lift_vs_m1": 0.0,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season"
+          ]
+        },
+        {
+          "model": "m2_slot",
+          "n_train": 142391,
+          "n_valid": 95436,
+          "train_season": 2025,
+          "valid_season": 2026,
+          "talent_feature_season": 2025,
+          "rmse": 0.5054281521550237,
+          "rmse_lift_vs_m1": -0.00010924836922343584,
+          "logloss_reached": 0.6937619126673737,
+          "logloss_lift_vs_m1": 0.0042741342452748965,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot"
+          ]
+        },
+        {
+          "model": "m3_state",
+          "n_train": 142391,
+          "n_valid": 95436,
+          "train_season": 2025,
+          "valid_season": 2026,
+          "talent_feature_season": 2025,
+          "rmse": 0.5053338154111017,
+          "rmse_lift_vs_m1": -1.4911625301428089e-05,
+          "logloss_reached": 0.6718120770436177,
+          "logloss_lift_vs_m1": 0.026223969869030972,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot",
+            "outs_start",
+            "bases_start"
+          ]
+        },
+        {
+          "model": "m4_prev_feats",
+          "n_train": 142391,
+          "n_valid": 87695,
+          "train_season": 2025,
+          "valid_season": 2026,
+          "talent_feature_season": 2025,
+          "rmse": 0.505243321926547,
+          "rmse_lift_vs_m1": 7.558185925327088e-05,
+          "logloss_reached": 0.6696367740522507,
+          "logloss_lift_vs_m1": 0.028399272860397895,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso",
+            "prev_woba",
+            "prev_k",
+            "prev_bb",
+            "prev_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot",
+            "outs_start",
+            "bases_start",
+            "prev_outcome"
+          ]
+        },
+        {
+          "model": "m5_arch_interact",
+          "n_train": 142391,
+          "n_valid": 87695,
+          "train_season": 2025,
+          "valid_season": 2026,
+          "talent_feature_season": 2025,
+          "rmse": 0.5052285998400391,
+          "rmse_lift_vs_m1": 9.030394576114986e-05,
+          "logloss_reached": 0.664036674280304,
+          "logloss_lift_vs_m1": 0.03399937263234465,
+          "numeric_features": [
+            "batter_woba",
+            "batter_k",
+            "batter_bb",
+            "batter_iso",
+            "prev_woba",
+            "prev_k",
+            "prev_bb",
+            "prev_iso"
+          ],
+          "categorical_features": [
+            "pitcher_hand",
+            "season",
+            "slot",
+            "outs_start",
+            "bases_start",
+            "prev_outcome",
+            "arch_pair"
+          ]
+        }
+      ],
+      "m5_vs_m1_rmse_lift": 9.030394576114986e-05,
+      "m5_vs_m4_rmse_lift": 1.4722086507878984e-05,
+      "m5_vs_m1_logloss_lift": 0.03399937263234465,
+      "m5_vs_m4_logloss_lift": 0.005600099771946754
+    }
+  ],
+  "aggregate": {
+    "m5_vs_m1_rmse_lift": {
+      "n": 2,
+      "mean": -0.0006661083981768234,
+      "std": 0.001069728595543504,
+      "bootstrap_ci95": [
+        -0.0014225207421147967,
+        9.030394576114986e-05
+      ],
+      "sign_stability": 0.5,
+      "folds": [
+        -0.0014225207421147967,
+        9.030394576114986e-05
+      ]
+    },
+    "m5_vs_m4_rmse_lift": {
+      "n": 2,
+      "mean": 7.361043253939492e-06,
+      "std": 1.0410087202936209e-05,
+      "bootstrap_ci95": [
+        0.0,
+        1.4722086507878984e-05
+      ],
+      "sign_stability": 0.5,
+      "folds": [
+        0.0,
+        1.4722086507878984e-05
+      ]
+    },
+    "m5_vs_m1_logloss_lift": {
+      "n": 2,
+      "mean": 0.0037512496673267615,
+      "std": 0.04277730573345737,
+      "bootstrap_ci95": [
+        -0.026496873297691126,
+        0.03399937263234465
+      ],
+      "sign_stability": 0.5,
+      "folds": [
+        -0.026496873297691126,
+        0.03399937263234465
+      ]
+    },
+    "m5_vs_m4_logloss_lift": {
+      "n": 2,
+      "mean": -0.024175396684329664,
+      "std": 0.04210891091485814,
+      "bootstrap_ci95": [
+        -0.05395089314060608,
+        0.005600099771946754
+      ],
+      "sign_stability": 0.5,
+      "folds": [
+        -0.05395089314060608,
+        0.005600099771946754
+      ]
+    }
+  },
+  "model5_diagnosis": {
+    "status": "improves_or_flat",
+    "fold": {
+      "train": 2025,
+      "valid": 2026
+    },
+    "evidence": {
+      "n_arch_pairs_train": 25,
+      "n_arch_pairs_valid": 25,
+      "n_arch_pairs_valid_unseen": 0,
+      "frac_valid_rows_unseen_pair": 0.0,
+      "m5_minus_m4_logloss": -0.005600099771946754,
+      "m5_minus_m1_rmse": -9.030394576114986e-05,
+      "regularization_note": "Baseline uses Ridge(alpha=5) and LogisticRegression(C=0.5). High-cardinality interaction features often need stronger regularization."
+    },
+    "notes": [
+      "Model 5 does not degrade log-loss vs Model 4 on this fold."
+    ],
+    "models_snapshot": {
+      "m1_talent": {
+        "rmse": 0.5053189037858002,
+        "logloss_reached": 0.6980360469126486,
+        "n_train": 142391,
+        "n_valid": 95436
+      },
+      "m4_prev_feats": {
+        "rmse": 0.505243321926547,
+        "logloss_reached": 0.6696367740522507,
+        "n_train": 142391,
+        "n_valid": 87695
+      },
+      "m5_arch_interact": {
+        "rmse": 0.5052285998400391,
+        "logloss_reached": 0.664036674280304,
+        "n_train": 142391,
+        "n_valid": 87695
+      }
+    }
+  },
+  "interpretation": "Multi-fold temporal validation. Positive lift favors Model 5. Sign stability is the fraction of folds with positive lift."
+}

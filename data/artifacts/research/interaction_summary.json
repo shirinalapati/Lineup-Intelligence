@@ -1,0 +1,656 @@
+{
+  "status": "ok",
+  "residual_model": {
+    "target": "woba_value",
+    "model": "Ridge(alpha=5)",
+    "n": 387834,
+    "rmse": 0.501647752456154,
+    "numeric_features": [
+      "batter_woba",
+      "batter_k",
+      "batter_bb",
+      "batter_iso"
+    ],
+    "categorical_features": [
+      "pitcher_hand",
+      "outs_start",
+      "bases_start",
+      "season"
+    ],
+    "note": "Residuals are wOBA-linear-weight minus expected value given batter baseline rates, pitcher hand, base/out state, and season."
+  },
+  "n_adjacent_pa": 387834,
+  "n_player_pairs": 9166,
+  "n_player_pairs_strong": 540,
+  "n_player_pairs_moderate": 2359,
+  "n_player_pairs_limited": 6267,
+  "pair_effect_mean_abs_strong": 0.019693247480458136,
+  "n_archetype_pairs": 16,
+  "incremental_predictive_value": {
+    "train_season": 2024,
+    "valid_season": 2025,
+    "models": [
+      {
+        "model": "m1_talent",
+        "n_train": 141600,
+        "n_valid": 129452,
+        "train_season": 2024,
+        "valid_season": 2025,
+        "talent_feature_season": 2024,
+        "rmse": 0.506864440084722,
+        "rmse_lift_vs_m1": 0.0,
+        "logloss_reached": 0.6931617179370437,
+        "logloss_lift_vs_m1": 0.0,
+        "numeric_features": [
+          "batter_woba",
+          "batter_k",
+          "batter_bb",
+          "batter_iso"
+        ],
+        "categorical_features": [
+          "pitcher_hand",
+          "season"
+        ]
+      },
+      {
+        "model": "m2_slot",
+        "n_train": 141600,
+        "n_valid": 129452,
+        "train_season": 2024,
+        "valid_season": 2025,
+        "talent_feature_season": 2024,
+        "rmse": 0.5069913223516971,
+        "rmse_lift_vs_m1": -0.00012688226697510352,
+        "logloss_reached": 0.6906535896547482,
+        "logloss_lift_vs_m1": 0.0025081282822955187,
+        "numeric_features": [
+          "batter_woba",
+          "batter_k",
+          "batter_bb",
+          "batter_iso"
+        ],
+        "categorical_features": [
+          "pitcher_hand",
+          "season",
+          "slot"
+        ]
+      },
+      {
+        "model": "m3_state",
+        "n_train": 141600,
+        "n_valid": 129452,
+        "train_season": 2024,
+        "valid_season": 2025,
+        "talent_feature_season": 2024,
+        "rmse": 0.5069073539533385,
+        "rmse_lift_vs_m1": -4.2913868616545336e-05,
+        "logloss_reached": 0.6691971476212674,
+        "logloss_lift_vs_m1": 0.023964570315776368,
+        "numeric_features": [
+          "batter_woba",
+          "batter_k",
+          "batter_bb",
+          "batter_iso"
+        ],
+        "categorical_features": [
+          "pitcher_hand",
+          "season",
+          "slot",
+          "outs_start",
+          "bases_start"
+        ]
+      },
+      {
+        "model": "m4_prev_feats",
+        "n_train": 141599,
+        "n_valid": 118608,
+        "train_season": 2024,
+        "valid_season": 2025,
+        "talent_feature_season": 2024,
+        "rmse": 0.5082869608268368,
+        "rmse_lift_vs_m1": -0.0014225207421147967,
+        "logloss_reached": 0.6657076980941288,
+        "logloss_lift_vs_m1": 0.027454019842914956,
+        "numeric_features": [
+          "batter_woba",
+          "batter_k",
+          "batter_bb",
+          "batter_iso",
+          "prev_woba",
+          "prev_k",
+          "prev_bb",
+          "prev_iso"
+        ],
+        "categorical_features": [
+          "pitcher_hand",
+          "season",
+          "slot",
+          "outs_start",
+          "bases_start",
+          "prev_outcome"
+        ]
+      },
+      {
+        "model": "m5_arch_interact",
+        "n_train": 141599,
+        "n_valid": 118608,
+        "train_season": 2024,
+        "valid_season": 2025,
+        "talent_feature_season": 2024,
+        "rmse": 0.5082869608268368,
+        "rmse_lift_vs_m1": -0.0014225207421147967,
+        "logloss_reached": 0.7196585912347349,
+        "logloss_lift_vs_m1": -0.026496873297691126,
+        "numeric_features": [
+          "batter_woba",
+          "batter_k",
+          "batter_bb",
+          "batter_iso",
+          "prev_woba",
+          "prev_k",
+          "prev_bb",
+          "prev_iso"
+        ],
+        "categorical_features": [
+          "pitcher_hand",
+          "season",
+          "slot",
+          "outs_start",
+          "bases_start",
+          "prev_outcome",
+          "arch_pair"
+        ]
+      }
+    ],
+    "apply": {
+      "season": 2026,
+      "n_pa": 103843,
+      "note": "Target-season rows are available for optional scoring; metrics above are strictly train\u2192validate temporal lifts and do not peek at the apply season."
+    },
+    "interpretation": "Positive rmse_lift_vs_m1 / logloss_lift_vs_m1 means the richer model improved out-of-sample prediction relative to individual talent. Zero/negative lift is an informative negative result about interaction value. Validation talent features are taken from the train season to avoid same-season leakage."
+  },
+  "multi_fold_validation": {
+    "folds": [
+      {
+        "train_season": 2024,
+        "valid_season": 2025,
+        "models": [
+          {
+            "model": "m1_talent",
+            "n_train": 141600,
+            "n_valid": 129452,
+            "train_season": 2024,
+            "valid_season": 2025,
+            "talent_feature_season": 2024,
+            "rmse": 0.506864440084722,
+            "rmse_lift_vs_m1": 0.0,
+            "logloss_reached": 0.6931617179370437,
+            "logloss_lift_vs_m1": 0.0,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season"
+            ]
+          },
+          {
+            "model": "m2_slot",
+            "n_train": 141600,
+            "n_valid": 129452,
+            "train_season": 2024,
+            "valid_season": 2025,
+            "talent_feature_season": 2024,
+            "rmse": 0.5069913223516971,
+            "rmse_lift_vs_m1": -0.00012688226697510352,
+            "logloss_reached": 0.6906535896547482,
+            "logloss_lift_vs_m1": 0.0025081282822955187,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot"
+            ]
+          },
+          {
+            "model": "m3_state",
+            "n_train": 141600,
+            "n_valid": 129452,
+            "train_season": 2024,
+            "valid_season": 2025,
+            "talent_feature_season": 2024,
+            "rmse": 0.5069073539533385,
+            "rmse_lift_vs_m1": -4.2913868616545336e-05,
+            "logloss_reached": 0.6691971476212674,
+            "logloss_lift_vs_m1": 0.023964570315776368,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot",
+              "outs_start",
+              "bases_start"
+            ]
+          },
+          {
+            "model": "m4_prev_feats",
+            "n_train": 141599,
+            "n_valid": 118608,
+            "train_season": 2024,
+            "valid_season": 2025,
+            "talent_feature_season": 2024,
+            "rmse": 0.5082869608268368,
+            "rmse_lift_vs_m1": -0.0014225207421147967,
+            "logloss_reached": 0.6657076980941288,
+            "logloss_lift_vs_m1": 0.027454019842914956,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso",
+              "prev_woba",
+              "prev_k",
+              "prev_bb",
+              "prev_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot",
+              "outs_start",
+              "bases_start",
+              "prev_outcome"
+            ]
+          },
+          {
+            "model": "m5_arch_interact",
+            "n_train": 141599,
+            "n_valid": 118608,
+            "train_season": 2024,
+            "valid_season": 2025,
+            "talent_feature_season": 2024,
+            "rmse": 0.5082869608268368,
+            "rmse_lift_vs_m1": -0.0014225207421147967,
+            "logloss_reached": 0.7196585912347349,
+            "logloss_lift_vs_m1": -0.026496873297691126,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso",
+              "prev_woba",
+              "prev_k",
+              "prev_bb",
+              "prev_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot",
+              "outs_start",
+              "bases_start",
+              "prev_outcome",
+              "arch_pair"
+            ]
+          }
+        ],
+        "m5_vs_m1_rmse_lift": -0.0014225207421147967,
+        "m5_vs_m4_rmse_lift": 0.0,
+        "m5_vs_m1_logloss_lift": -0.026496873297691126,
+        "m5_vs_m4_logloss_lift": -0.05395089314060608
+      },
+      {
+        "train_season": 2025,
+        "valid_season": 2026,
+        "models": [
+          {
+            "model": "m1_talent",
+            "n_train": 142391,
+            "n_valid": 95436,
+            "train_season": 2025,
+            "valid_season": 2026,
+            "talent_feature_season": 2025,
+            "rmse": 0.5053189037858002,
+            "rmse_lift_vs_m1": 0.0,
+            "logloss_reached": 0.6980360469126486,
+            "logloss_lift_vs_m1": 0.0,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season"
+            ]
+          },
+          {
+            "model": "m2_slot",
+            "n_train": 142391,
+            "n_valid": 95436,
+            "train_season": 2025,
+            "valid_season": 2026,
+            "talent_feature_season": 2025,
+            "rmse": 0.5054281521550237,
+            "rmse_lift_vs_m1": -0.00010924836922343584,
+            "logloss_reached": 0.6937619126673737,
+            "logloss_lift_vs_m1": 0.0042741342452748965,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot"
+            ]
+          },
+          {
+            "model": "m3_state",
+            "n_train": 142391,
+            "n_valid": 95436,
+            "train_season": 2025,
+            "valid_season": 2026,
+            "talent_feature_season": 2025,
+            "rmse": 0.5053338154111017,
+            "rmse_lift_vs_m1": -1.4911625301428089e-05,
+            "logloss_reached": 0.6718120770436177,
+            "logloss_lift_vs_m1": 0.026223969869030972,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot",
+              "outs_start",
+              "bases_start"
+            ]
+          },
+          {
+            "model": "m4_prev_feats",
+            "n_train": 142391,
+            "n_valid": 87695,
+            "train_season": 2025,
+            "valid_season": 2026,
+            "talent_feature_season": 2025,
+            "rmse": 0.505243321926547,
+            "rmse_lift_vs_m1": 7.558185925327088e-05,
+            "logloss_reached": 0.6696367740522507,
+            "logloss_lift_vs_m1": 0.028399272860397895,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso",
+              "prev_woba",
+              "prev_k",
+              "prev_bb",
+              "prev_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot",
+              "outs_start",
+              "bases_start",
+              "prev_outcome"
+            ]
+          },
+          {
+            "model": "m5_arch_interact",
+            "n_train": 142391,
+            "n_valid": 87695,
+            "train_season": 2025,
+            "valid_season": 2026,
+            "talent_feature_season": 2025,
+            "rmse": 0.5052285998400391,
+            "rmse_lift_vs_m1": 9.030394576114986e-05,
+            "logloss_reached": 0.664036674280304,
+            "logloss_lift_vs_m1": 0.03399937263234465,
+            "numeric_features": [
+              "batter_woba",
+              "batter_k",
+              "batter_bb",
+              "batter_iso",
+              "prev_woba",
+              "prev_k",
+              "prev_bb",
+              "prev_iso"
+            ],
+            "categorical_features": [
+              "pitcher_hand",
+              "season",
+              "slot",
+              "outs_start",
+              "bases_start",
+              "prev_outcome",
+              "arch_pair"
+            ]
+          }
+        ],
+        "m5_vs_m1_rmse_lift": 9.030394576114986e-05,
+        "m5_vs_m4_rmse_lift": 1.4722086507878984e-05,
+        "m5_vs_m1_logloss_lift": 0.03399937263234465,
+        "m5_vs_m4_logloss_lift": 0.005600099771946754
+      }
+    ],
+    "aggregate": {
+      "m5_vs_m1_rmse_lift": {
+        "n": 2,
+        "mean": -0.0006661083981768234,
+        "std": 0.001069728595543504,
+        "bootstrap_ci95": [
+          -0.0014225207421147967,
+          9.030394576114986e-05
+        ],
+        "sign_stability": 0.5,
+        "folds": [
+          -0.0014225207421147967,
+          9.030394576114986e-05
+        ]
+      },
+      "m5_vs_m4_rmse_lift": {
+        "n": 2,
+        "mean": 7.361043253939492e-06,
+        "std": 1.0410087202936209e-05,
+        "bootstrap_ci95": [
+          0.0,
+          1.4722086507878984e-05
+        ],
+        "sign_stability": 0.5,
+        "folds": [
+          0.0,
+          1.4722086507878984e-05
+        ]
+      },
+      "m5_vs_m1_logloss_lift": {
+        "n": 2,
+        "mean": 0.0037512496673267615,
+        "std": 0.04277730573345737,
+        "bootstrap_ci95": [
+          -0.026496873297691126,
+          0.03399937263234465
+        ],
+        "sign_stability": 0.5,
+        "folds": [
+          -0.026496873297691126,
+          0.03399937263234465
+        ]
+      },
+      "m5_vs_m4_logloss_lift": {
+        "n": 2,
+        "mean": -0.024175396684329664,
+        "std": 0.04210891091485814,
+        "bootstrap_ci95": [
+          -0.05395089314060608,
+          0.005600099771946754
+        ],
+        "sign_stability": 0.5,
+        "folds": [
+          -0.05395089314060608,
+          0.005600099771946754
+        ]
+      }
+    },
+    "model5_diagnosis": {
+      "status": "improves_or_flat",
+      "fold": {
+        "train": 2025,
+        "valid": 2026
+      },
+      "evidence": {
+        "n_arch_pairs_train": 25,
+        "n_arch_pairs_valid": 25,
+        "n_arch_pairs_valid_unseen": 0,
+        "frac_valid_rows_unseen_pair": 0.0,
+        "m5_minus_m4_logloss": -0.005600099771946754,
+        "m5_minus_m1_rmse": -9.030394576114986e-05,
+        "regularization_note": "Baseline uses Ridge(alpha=5) and LogisticRegression(C=0.5). High-cardinality interaction features often need stronger regularization."
+      },
+      "notes": [
+        "Model 5 does not degrade log-loss vs Model 4 on this fold."
+      ],
+      "models_snapshot": {
+        "m1_talent": {
+          "rmse": 0.5053189037858002,
+          "logloss_reached": 0.6980360469126486,
+          "n_train": 142391,
+          "n_valid": 95436
+        },
+        "m4_prev_feats": {
+          "rmse": 0.505243321926547,
+          "logloss_reached": 0.6696367740522507,
+          "n_train": 142391,
+          "n_valid": 87695
+        },
+        "m5_arch_interact": {
+          "rmse": 0.5052285998400391,
+          "logloss_reached": 0.664036674280304,
+          "n_train": 142391,
+          "n_valid": 87695
+        }
+      }
+    },
+    "interpretation": "Multi-fold temporal validation. Positive lift favors Model 5. Sign stability is the fraction of folds with positive lift."
+  },
+  "previous_outcome_context": {
+    "groups": [
+      {
+        "prev_outcome_group": "strikeout",
+        "n": 75183,
+        "mean_residual": -0.004729827698337177,
+        "se": 0.0018048854254113606,
+        "mean_woba": 0.3000824654509663
+      },
+      {
+        "prev_outcome_group": "walk",
+        "n": 48432,
+        "mean_residual": -0.0015206456617535204,
+        "se": 0.00229677814371636,
+        "mean_woba": 0.3147241493227618
+      },
+      {
+        "prev_outcome_group": "single",
+        "n": 70845,
+        "mean_residual": 0.0014287097970784592,
+        "se": 0.0019032839429582041,
+        "mean_woba": 0.3180640835627073
+      },
+      {
+        "prev_outcome_group": "extra_base",
+        "n": 38262,
+        "mean_residual": 0.0010105290512652124,
+        "se": 0.0025893594069743724,
+        "mean_woba": 0.31815534995556943
+      },
+      {
+        "prev_outcome_group": "out_in_play",
+        "n": 155112,
+        "mean_residual": 0.0018655470784559563,
+        "se": 0.0012701149278617119,
+        "mean_woba": 0.3083393934705245
+      },
+      {
+        "prev_outcome_group": "reached_base",
+        "n": 157539,
+        "mean_residual": 0.00042042857605727163,
+        "se": 0.0012753936164916252,
+        "mean_woba": 0.31705945829286714
+      }
+    ],
+    "by_outcome_class": [
+      {
+        "prev_outcome": "OUT_IP",
+        "n": 155112,
+        "mean_residual": 0.0018655470784559563,
+        "se": 0.0012701149278617119
+      },
+      {
+        "prev_outcome": "K",
+        "n": 75183,
+        "mean_residual": -0.004729827698337177,
+        "se": 0.0018048854254113606
+      },
+      {
+        "prev_outcome": "1B",
+        "n": 70845,
+        "mean_residual": 0.0014287097970784599,
+        "se": 0.0019032839429582041
+      },
+      {
+        "prev_outcome": "BB_HBP",
+        "n": 48432,
+        "mean_residual": -0.0015206456617535202,
+        "se": 0.00229677814371636
+      },
+      {
+        "prev_outcome": "2B",
+        "n": 21141,
+        "mean_residual": -0.0026795900867007416,
+        "se": 0.003449520267620492
+      },
+      {
+        "prev_outcome": "HR",
+        "n": 15299,
+        "mean_residual": 0.006173259516905912,
+        "se": 0.004148723428414358
+      },
+      {
+        "prev_outcome": "3B",
+        "n": 1822,
+        "mean_residual": 0.0004771565495644339,
+        "se": 0.01188144808301846
+      }
+    ],
+    "note": "Means are residuals after base/out controls, so they are not the trivial 'runner on base boost.'"
+  },
+  "artifacts": {
+    "adjacency_residuals": "/Users/Shirin/Lineup_Intelligence/data/artifacts/research/adjacency_residuals.parquet",
+    "player_pair_effects": "/Users/Shirin/Lineup_Intelligence/data/artifacts/research/player_pair_effects.parquet",
+    "archetype_pair_effects": "/Users/Shirin/Lineup_Intelligence/data/artifacts/research/archetype_pair_effects.parquet",
+    "previous_outcome_context": "/Users/Shirin/Lineup_Intelligence/data/artifacts/research/previous_outcome_context.json",
+    "incremental_predictive_value": "/Users/Shirin/Lineup_Intelligence/data/artifacts/research/incremental_predictive_value.json",
+    "interaction_multifold": "/Users/Shirin/Lineup_Intelligence/data/artifacts/research/interaction_multifold.json"
+  },
+  "language": "Reported quantities are estimated associations after controls, not causal claims about lineup chemistry. Mechanical sequencing value (Markov ordering) is distinct from residual interaction."
+}

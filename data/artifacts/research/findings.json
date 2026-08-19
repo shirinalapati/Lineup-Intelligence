@@ -1,0 +1,247 @@
+{
+  "status": "ok",
+  "title": "What we learned",
+  "generated_from": {
+    "research_dir": "/Users/Shirin/Lineup_Intelligence/data/artifacts/research",
+    "models_dir": "/Users/Shirin/Lineup_Intelligence/data/models"
+  },
+  "unavailable_inputs": [],
+  "statements": [
+    {
+      "id": "archetype_fit",
+      "question": "How does a hitter get an archetype?",
+      "answer": "There is no checklist like \u201cISO above X, therefore Power.\u201d This app evaluates 2026 lineups. The four style groups were learned from 2025 season stats (walks, strikeouts, extra-base power, quality of contact, and batted-ball direction), then each 2026 hitter with enough plate appearances is assigned to the group whose typical hitter they most resemble. Names are just labels for those groups \u2014 not lineup chemistry. Spray Contact (62 hitters when the groups were learned on 2025): typical member has less extra-base power, fewer strikeouts, fewer walks (about 7% walks, 17% strikeouts, ISO 0.098). Three True Outcomes (75 hitters when the groups were learned on 2025): typical member has more extra-base power, more strikeouts, more walks (about 11% walks, 25% strikeouts, ISO 0.231). Balanced (100 hitters when the groups were learned on 2025): typical member has softer contact, fewer ground balls, more fly balls (about 8% walks, 22% strikeouts, ISO 0.153). Power (105 hitters when the groups were learned on 2025): typical member has harder contact, more ground balls, fewer fly balls (about 8% walks, 23% strikeouts, ISO 0.153). Groups overlap, so treat the name as a shorthand, not a hard identity.",
+      "support": {
+        "method": "kmeans",
+        "k": 4,
+        "silhouette": 0.14556685397782987,
+        "train_season": 2025,
+        "labels": [
+          "Spray Contact",
+          "Three True Outcomes",
+          "Balanced",
+          "Power"
+        ],
+        "exploratory": true,
+        "plain_blurbs": [
+          "Spray Contact (62 hitters when the groups were learned on 2025): typical member has less extra-base power, fewer strikeouts, fewer walks (about 7% walks, 17% strikeouts, ISO 0.098).",
+          "Three True Outcomes (75 hitters when the groups were learned on 2025): typical member has more extra-base power, more strikeouts, more walks (about 11% walks, 25% strikeouts, ISO 0.231).",
+          "Balanced (100 hitters when the groups were learned on 2025): typical member has softer contact, fewer ground balls, more fly balls (about 8% walks, 22% strikeouts, ISO 0.153).",
+          "Power (105 hitters when the groups were learned on 2025): typical member has harder contact, more ground balls, fewer fly balls (about 8% walks, 23% strikeouts, ISO 0.153)."
+        ],
+        "n_train_by_cluster": {
+          "Spray Contact": 62,
+          "Three True Outcomes": 75,
+          "Balanced": 100,
+          "Power": 105
+        }
+      }
+    },
+    {
+      "id": "pair_reliability",
+      "question": "When can we trust a two-hitter pairing?",
+      "answer": "A pairing is two specific hitters batting back-to-back. The more often that happens, the more we trust any leftover stat after controlling for talent and game state. Rule of thumb from shared plate appearances: strong \u2248 117+ times together, moderate \u2248 33\u2013116, limited = fewer than that. Of 9,166 pairs we can estimate: 540 strong, 2,359 moderate, 6,267 limited. Most are limited because the same two hitters rarely bat in that exact order enough times.",
+      "support": {
+        "n_player_pairs": 9166,
+        "n_strong": 540,
+        "n_moderate": 2359,
+        "n_limited": 6267,
+        "mean_abs_effect_strong": 0.019693247480458136,
+        "n_adjacent_pa": 387834,
+        "prior_n0": 50,
+        "tier_strong_min": 0.7,
+        "tier_moderate_min": 0.4
+      }
+    },
+    {
+      "id": "pair_effect_magnitude",
+      "question": "How large are the more reliable pair effects?",
+      "answer": "Even among hitter pairs with the largest samples, the remaining effect after accounting for player ability and game situation was generally small.\n\nThat suggests specific hitter pairings may provide some useful context, but we did not find evidence of large, consistent \u201cchemistry\u201d effects between two hitters simply because they bat next to each other.",
+      "support": {
+        "mean_abs_effect_strong": 0.019693247480458136
+      }
+    },
+    {
+      "id": "archetype_interaction_predictive",
+      "question": "Does hitter style improve prediction?",
+      "answer": "Not in our historical test.\n\nWe trained the model on 2024 data and tested it on 2025 games it had not seen before. Adding information about which offensive styles were batting next to each other did not improve prediction accuracy. The more complicated interaction model actually performed slightly worse than the simpler model based primarily on hitter talent and game context.\n\nTakeaway: who the hitters are and the situation they bat in mattered more than whether certain offensive styles were paired together.",
+      "support": {
+        "m1_rmse": 0.506864440084722,
+        "m5_rmse": 0.5082869608268368,
+        "rmse_lift_vs_m1": -0.0014225207421147967,
+        "logloss_lift_vs_m1": -0.026496873297691126,
+        "train_season": 2024,
+        "valid_season": 2025
+      }
+    },
+    {
+      "id": "lineup_chemistry_support",
+      "question": "Is lineup chemistry supported as a predictive signal?",
+      "answer": "Out-of-sample incremental tests do not show a clear predictive lift from archetype-interaction features beyond talent/state controls. Residual pair associations may still be useful diagnostically, but the data do not support treating 'chemistry' as a strong predictive input.",
+      "support": {
+        "rmse_lift_m5_vs_m1": -0.0014225207421147967,
+        "logloss_lift_m5_vs_m1": -0.026496873297691126,
+        "predictive_support": false
+      }
+    },
+    {
+      "id": "prev_hitter_features_lift",
+      "question": "Do previous-hitter characteristics improve prediction?",
+      "answer": "Model 4 RMSE lift vs Model 1 is -0.00142 on the 2024\u21922025 split.",
+      "support": {
+        "rmse_lift_vs_m1": -0.0014225207421147967,
+        "logloss_lift_vs_m1": 0.027454019842914956,
+        "m4_rmse": 0.5082869608268368,
+        "m1_rmse": 0.506864440084722
+      }
+    },
+    {
+      "id": "incremental_ladder",
+      "question": "How do Models 1\u20135 compare out of sample?",
+      "answer": "Temporal validation RMSE / log-loss by model (see support table).",
+      "support": {
+        "models": [
+          {
+            "model": "m1_talent",
+            "rmse": 0.506864440084722,
+            "rmse_lift_vs_m1": 0.0,
+            "logloss_reached": 0.6931617179370437,
+            "logloss_lift_vs_m1": 0.0
+          },
+          {
+            "model": "m2_slot",
+            "rmse": 0.5069913223516971,
+            "rmse_lift_vs_m1": -0.00012688226697510352,
+            "logloss_reached": 0.6906535896547482,
+            "logloss_lift_vs_m1": 0.0025081282822955187
+          },
+          {
+            "model": "m3_state",
+            "rmse": 0.5069073539533385,
+            "rmse_lift_vs_m1": -4.2913868616545336e-05,
+            "logloss_reached": 0.6691971476212674,
+            "logloss_lift_vs_m1": 0.023964570315776368
+          },
+          {
+            "model": "m4_prev_feats",
+            "rmse": 0.5082869608268368,
+            "rmse_lift_vs_m1": -0.0014225207421147967,
+            "logloss_reached": 0.6657076980941288,
+            "logloss_lift_vs_m1": 0.027454019842914956
+          },
+          {
+            "model": "m5_arch_interact",
+            "rmse": 0.5082869608268368,
+            "rmse_lift_vs_m1": -0.0014225207421147967,
+            "logloss_reached": 0.7196585912347349,
+            "logloss_lift_vs_m1": -0.026496873297691126
+          }
+        ]
+      }
+    },
+    {
+      "id": "prev_outcome_context",
+      "question": "After base/out controls, does previous-batter outcome still matter?",
+      "answer": "Largest absolute residual association is after 'strikeout' (mean residual=-0.0047, n=75183). Because residuals already control for current outs/bases, this is not the trivial runner-on-base effect.",
+      "support": {
+        "groups": [
+          {
+            "prev_outcome_group": "strikeout",
+            "n": 75183,
+            "mean_residual": -0.004729827698337177,
+            "se": 0.0018048854254113606,
+            "mean_woba": 0.3000824654509663
+          },
+          {
+            "prev_outcome_group": "walk",
+            "n": 48432,
+            "mean_residual": -0.0015206456617535204,
+            "se": 0.00229677814371636,
+            "mean_woba": 0.3147241493227618
+          },
+          {
+            "prev_outcome_group": "single",
+            "n": 70845,
+            "mean_residual": 0.0014287097970784592,
+            "se": 0.0019032839429582041,
+            "mean_woba": 0.3180640835627073
+          },
+          {
+            "prev_outcome_group": "extra_base",
+            "n": 38262,
+            "mean_residual": 0.0010105290512652124,
+            "se": 0.0025893594069743724,
+            "mean_woba": 0.31815534995556943
+          },
+          {
+            "prev_outcome_group": "out_in_play",
+            "n": 155112,
+            "mean_residual": 0.0018655470784559563,
+            "se": 0.0012701149278617119,
+            "mean_woba": 0.3083393934705245
+          },
+          {
+            "prev_outcome_group": "reached_base",
+            "n": 157539,
+            "mean_residual": 0.00042042857605727163,
+            "se": 0.0012753936164916252,
+            "mean_woba": 0.31705945829286714
+          }
+        ]
+      }
+    },
+    {
+      "id": "archetype_pair_top",
+      "question": "Which archetype adjacencies are most observed?",
+      "answer": "Most frequent estimated archetype adjacency is Power \u2192 Power (n=25350, shrunk effect=-0.0016, tier=strong).",
+      "support": {
+        "prev_arch_label": "Power",
+        "batter_arch_label": "Power",
+        "n": 25350,
+        "effect": -0.0015823338295591022,
+        "reliability_tier": "strong"
+      }
+    },
+    {
+      "id": "player_pair_coverage",
+      "question": "How sparse are player-pair samples?",
+      "answer": "9166 pairs meet the minimum sample gate; 540 are strong-reliability after shrinkage (median n=21).",
+      "support": {
+        "n_pairs": 9166,
+        "n_strong": 540,
+        "median_n": 21.0,
+        "p90_n": 82.0
+      }
+    },
+    {
+      "id": "lineup_stability_league",
+      "question": "How stable are 2026 starting batting orders?",
+      "answer": "Across 3790 team-games, league median unique orders per team is 108; highest most-common-order share is STL (11.0%); highest order entropy is HOU (6.95 bits).",
+      "support": {
+        "n_team_games": 3790,
+        "median_unique_orders": 108.5,
+        "max_most_common_order_pct": {
+          "team": "STL",
+          "pct": 0.11023622047244094
+        },
+        "max_entropy": {
+          "team": "HOU",
+          "entropy_bits": 6.945533891753886
+        }
+      }
+    },
+    {
+      "id": "order_value_summary",
+      "question": "How much does batting order matter on average?",
+      "answer": "Optimizer summary present (see support).",
+      "support": {
+        "equivalence_eps": 0.02
+      }
+    }
+  ],
+  "caveats": [
+    "Statements are limited to quantities present in computed artifacts.",
+    "Pair and archetype effects are estimated associations after controls, not causal chemistry.",
+    "Missing artifacts are listed under unavailable_inputs rather than filled with placeholders."
+  ]
+}

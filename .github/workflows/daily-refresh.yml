@@ -1,0 +1,48 @@
+name: Daily lineup refresh
+
+# Keeps a deployed API current for the rest of the 2026 season.
+# Requires repo secrets:
+#   LI_API_BASE_URL   e.g. https://your-api.example.com
+#   LI_REFRESH_TOKEN  same value as the API's LI_REFRESH_TOKEN env
+
+on:
+  schedule:
+    # 14:30 UTC ≈ mid-morning US Eastern during the season
+    - cron: "30 14 * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop after World Series window
+        run: |
+          today=$(date -u +%F)
+          if [[ "$today" > "2026-11-05" ]]; then
+            echo "Past 2026-11-05 — skipping season refresh"
+            exit 0
+          fi
+
+      - name: Trigger deployed daily refresh
+        env:
+          API_BASE: ${{ secrets.LI_API_BASE_URL }}
+          TOKEN: ${{ secrets.LI_REFRESH_TOKEN }}
+        run: |
+          if [[ -z "$API_BASE" || -z "$TOKEN" ]]; then
+            echo "Set secrets LI_API_BASE_URL and LI_REFRESH_TOKEN to enable remote refresh."
+            exit 1
+          fi
+          base="${API_BASE%/}"
+          echo "POST $base/api/ops/daily-refresh"
+          curl -fsS -X POST "$base/api/ops/daily-refresh" \
+            -H "X-Refresh-Token: $TOKEN" \
+            -H "Accept: application/json" \
+            --max-time 1800 \
+            | tee /tmp/refresh.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open("/tmp/refresh.json"))
+          print("ran_on", d.get("ran_on"))
+          print("new_lineups", (d.get("refresh") or {}).get("n_new_lineups"))
+          PY

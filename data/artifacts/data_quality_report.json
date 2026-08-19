@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-08-18T08:43:06",
+  "season": 2026,
+  "available": true,
+  "n_teams": 30,
+  "expected_teams": 30,
+  "teams_ok": true,
+  "canonical_missing": [],
+  "n_team_games": 3760,
+  "n_games": 1880,
+  "date_min": "2026-03-25",
+  "date_max": "2026-08-17",
+  "n_invalid_starting_lineups": 0,
+  "invalid_examples": [],
+  "n_duplicate_player_lineups": 0,
+  "n_pitcher_as_starting_hitter": 0,
+  "pitcher_as_starting_hitter_cases": [],
+  "n_position_labeled_P_slots": 0,
+  "n_unresolved_player_ids": 0,
+  "unresolved_player_id_examples": [],
+  "n_players_table": 627,
+  "optimizer_n_evaluations": 3760,
+  "optimizer_coverage": 1.0,
+  "interaction_pair_sample_size": 9166,
+  "extraction_method": "battingOrder_codes_100_900",
+  "notes": [
+    "Starting lineups use GUMBO/live battingOrder codes 100\u2013900, not the live slot array.",
+    "Position==P counts are exploratory; do not treat them as pitcher-as-hitter without identity checks."
+  ]
+}

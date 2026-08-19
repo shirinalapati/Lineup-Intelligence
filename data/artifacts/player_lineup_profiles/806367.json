@@ -1,0 +1,454 @@
+{
+  "available": true,
+  "player_id": 806367,
+  "name": "Turner Hill",
+  "data_cutoff": "2026-08-17",
+  "season": 2026,
+  "offensive_profile": {
+    "label": null,
+    "display_name": "Offensive profile",
+    "tooltip": "Exploratory profile group derived from unsupervised clustering of hitter characteristics."
+  },
+  "summary": {
+    "primary_actual_slot": 7,
+    "best_modeled_slot": 5,
+    "placement_opportunity": 0.0,
+    "actual_slot_fit_rank": 3,
+    "near_equivalent_slots": [
+      5,
+      6,
+      7,
+      4,
+      8,
+      3,
+      9,
+      2,
+      1
+    ],
+    "best_context": "Neutral",
+    "offensive_profile": null,
+    "actual_usage_fit": {
+      "avg_slot_rank": 3.0,
+      "avg_opportunity_gap": 0.0,
+      "pct_top1": 0.0,
+      "pct_top3": 1.0,
+      "pct_within_01": 1.0,
+      "pct_within_02": 1.0,
+      "n_starts": 2
+    }
+  },
+  "season_metrics": {},
+  "slot_usage": {
+    "7": 2
+  },
+  "modeled_slot_fit": {
+    "neutral": {
+      "slots": [
+        {
+          "slot": 1,
+          "expected_runs": 4.361028008789223,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.20150172916614226,
+          "expected_pa_162": 755.5939276965802,
+          "prob_two_out": 0.22768910003301063,
+          "prob_risp": 0.049390952612130765,
+          "prob_runners_on": 0.3514730288805834,
+          "expected_pa": 4.664160047509754,
+          "avg_runners_on": 0.2448102683564966,
+          "prob_bases_empty": 0.6485269711194165,
+          "delta_vs_avg": -0.0037152790977312833,
+          "delta_vs_primary": -0.005614630850947933,
+          "fit_rank": 9
+        },
+        {
+          "slot": 2,
+          "expected_runs": 4.361214568145753,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.09099109171075215,
+          "expected_pa_162": 736.282737290516,
+          "prob_two_out": 0.22681252683542902,
+          "prob_risp": 0.04936744288056894,
+          "prob_runners_on": 0.3976990463522026,
+          "expected_pa": 4.544955168459976,
+          "avg_runners_on": 0.2783586150315881,
+          "prob_bases_empty": 0.6023009536477973,
+          "delta_vs_avg": -0.0035287197412010585,
+          "delta_vs_primary": -0.005428071494417708,
+          "fit_rank": 8
+        },
+        {
+          "slot": 3,
+          "expected_runs": 4.364956148005772,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.07974422788157959,
+          "expected_pa_162": 719.3793494071704,
+          "prob_two_out": 0.3025553258451916,
+          "prob_risp": 0.06135505040002005,
+          "prob_runners_on": 0.4644362188381764,
+          "expected_pa": 4.440613267945496,
+          "avg_runners_on": 0.3252780637761431,
+          "prob_bases_empty": 0.5355637811618236,
+          "delta_vs_avg": 0.00021286011881826994,
+          "delta_vs_primary": -0.0016864916343983793,
+          "fit_rank": 6
+        },
+        {
+          "slot": 4,
+          "expected_runs": 4.366430870694436,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.12302563837711339,
+          "expected_pa_162": 702.0486217025665,
+          "prob_two_out": 0.28138674964007043,
+          "prob_risp": 0.08370939941766035,
+          "prob_runners_on": 0.4832336700730293,
+          "expected_pa": 4.333633467299793,
+          "avg_runners_on": 0.35044887681527537,
+          "prob_bases_empty": 0.5167663299269708,
+          "delta_vs_avg": 0.0016875828074818244,
+          "delta_vs_primary": -0.00021176894573482485,
+          "fit_rank": 4
+        },
+        {
+          "slot": 5,
+          "expected_runs": 4.366642639640171,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.11325634210023293,
+          "expected_pa_162": 685.1434132307197,
+          "prob_two_out": 0.2558617849663853,
+          "prob_risp": 0.07467335650306192,
+          "prob_runners_on": 0.4613131900534303,
+          "expected_pa": 4.229280328584689,
+          "avg_runners_on": 0.3195094933316555,
+          "prob_bases_empty": 0.5386868099465697,
+          "delta_vs_avg": 0.0018993517532166493,
+          "delta_vs_primary": 0.0,
+          "fit_rank": 1
+        },
+        {
+          "slot": 6,
+          "expected_runs": 4.366642639640171,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.09668749523239605,
+          "expected_pa_162": 668.277701958468,
+          "prob_two_out": 0.27533017576718805,
+          "prob_risp": 0.05919280103890506,
+          "prob_runners_on": 0.4446232965993905,
+          "expected_pa": 4.12517099974363,
+          "avg_runners_on": 0.30080625914672576,
+          "prob_bases_empty": 0.5553767034006095,
+          "delta_vs_avg": 0.0018993517532166493,
+          "delta_vs_primary": 0.0,
+          "fit_rank": 2
+        },
+        {
+          "slot": 7,
+          "expected_runs": 4.366642639640171,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.09876622230845988,
+          "expected_pa_162": 650.8219304969736,
+          "prob_two_out": 0.26664093148436785,
+          "prob_risp": 0.0607791442697263,
+          "prob_runners_on": 0.4542685360689242,
+          "expected_pa": 4.017419324055393,
+          "avg_runners_on": 0.307943133407229,
+          "prob_bases_empty": 0.5457314639310757,
+          "delta_vs_avg": 0.0018993517532166493,
+          "delta_vs_primary": 0.0,
+          "fit_rank": 3
+        },
+        {
+          "slot": 8,
+          "expected_runs": 4.36504905501872,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.102434144746571,
+          "expected_pa_162": 631.940121751766,
+          "prob_two_out": 0.28689429218327256,
+          "prob_risp": 0.06639951590923011,
+          "prob_runners_on": 0.43982566118686867,
+          "expected_pa": 3.9008649490849754,
+          "avg_runners_on": 0.3055769994878838,
+          "prob_bases_empty": 0.5601743388131313,
+          "delta_vs_avg": 0.00030576713176611037,
+          "delta_vs_primary": -0.001593584621450539,
+          "fit_rank": 5
+        },
+        {
+          "slot": 9,
+          "expected_runs": 4.36408302140816,
+          "weight_games": 2.0,
+          "prob_lead_inning": 0.09424754611062464,
+          "expected_pa_162": 612.7844563117181,
+          "prob_two_out": 0.2847748723359427,
+          "prob_risp": 0.0643422382530127,
+          "prob_runners_on": 0.4451238060404114,
+          "expected_pa": 3.7826201006896185,
+          "avg_runners_on": 0.3120608998448218,
+          "prob_bases_empty": 0.5548761939595886,
+          "delta_vs_avg": -0.000660266478794469,
+          "delta_vs_primary": -0.0025596182320111183,
+          "fit_rank": 7
+        }
+      ],
+      "best_slot": 5,
+      "best_expected_runs": 4.366642639640171,
+      "near_equivalent_slots": [
+        5,
+        6,
+        7,
+        4,
+        8,
+        3,
+        9,
+        2,
+        1
+      ],
+      "near_equivalent_slots_02": [
+        5,
+        6,
+        7,
+        4,
+        8,
+        3,
+        9,
+        2,
+        1
+      ],
+      "primary_slot": 7,
+      "primary_expected_runs": 4.366642639640171,
+      "primary_fit_rank": 3,
+      "placement_opportunity": 0.0,
+      "avg_placement_runs": 4.364743287886954,
+      "equivalence_eps": 0.01,
+      "n_starts": 2,
+      "n_personnel_groups": 1,
+      "actual_usage_fit": {
+        "avg_slot_rank": 3.0,
+        "avg_opportunity_gap": 0.0,
+        "pct_top1": 0.0,
+        "pct_top3": 1.0,
+        "pct_within_01": 1.0,
+        "pct_within_02": 1.0,
+        "n_starts": 2
+      }
+    }
+  },
+  "run_opportunity_profile": {
+    "context": "neutral",
+    "slots": [
+      {
+        "slot": 1,
+        "expected_runs": 4.361028008789223,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.20150172916614226,
+        "expected_pa_162": 755.5939276965802,
+        "prob_two_out": 0.22768910003301063,
+        "prob_risp": 0.049390952612130765,
+        "prob_runners_on": 0.3514730288805834,
+        "expected_pa": 4.664160047509754,
+        "avg_runners_on": 0.2448102683564966,
+        "prob_bases_empty": 0.6485269711194165,
+        "delta_vs_avg": -0.0037152790977312833,
+        "delta_vs_primary": -0.005614630850947933,
+        "fit_rank": 9
+      },
+      {
+        "slot": 2,
+        "expected_runs": 4.361214568145753,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.09099109171075215,
+        "expected_pa_162": 736.282737290516,
+        "prob_two_out": 0.22681252683542902,
+        "prob_risp": 0.04936744288056894,
+        "prob_runners_on": 0.3976990463522026,
+        "expected_pa": 4.544955168459976,
+        "avg_runners_on": 0.2783586150315881,
+        "prob_bases_empty": 0.6023009536477973,
+        "delta_vs_avg": -0.0035287197412010585,
+        "delta_vs_primary": -0.005428071494417708,
+        "fit_rank": 8
+      },
+      {
+        "slot": 3,
+        "expected_runs": 4.364956148005772,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.07974422788157959,
+        "expected_pa_162": 719.3793494071704,
+        "prob_two_out": 0.3025553258451916,
+        "prob_risp": 0.06135505040002005,
+        "prob_runners_on": 0.4644362188381764,
+        "expected_pa": 4.440613267945496,
+        "avg_runners_on": 0.3252780637761431,
+        "prob_bases_empty": 0.5355637811618236,
+        "delta_vs_avg": 0.00021286011881826994,
+        "delta_vs_primary": -0.0016864916343983793,
+        "fit_rank": 6
+      },
+      {
+        "slot": 4,
+        "expected_runs": 4.366430870694436,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.12302563837711339,
+        "expected_pa_162": 702.0486217025665,
+        "prob_two_out": 0.28138674964007043,
+        "prob_risp": 0.08370939941766035,
+        "prob_runners_on": 0.4832336700730293,
+        "expected_pa": 4.333633467299793,
+        "avg_runners_on": 0.35044887681527537,
+        "prob_bases_empty": 0.5167663299269708,
+        "delta_vs_avg": 0.0016875828074818244,
+        "delta_vs_primary": -0.00021176894573482485,
+        "fit_rank": 4
+      },
+      {
+        "slot": 5,
+        "expected_runs": 4.366642639640171,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.11325634210023293,
+        "expected_pa_162": 685.1434132307197,
+        "prob_two_out": 0.2558617849663853,
+        "prob_risp": 0.07467335650306192,
+        "prob_runners_on": 0.4613131900534303,
+        "expected_pa": 4.229280328584689,
+        "avg_runners_on": 0.3195094933316555,
+        "prob_bases_empty": 0.5386868099465697,
+        "delta_vs_avg": 0.0018993517532166493,
+        "delta_vs_primary": 0.0,
+        "fit_rank": 1
+      },
+      {
+        "slot": 6,
+        "expected_runs": 4.366642639640171,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.09668749523239605,
+        "expected_pa_162": 668.277701958468,
+        "prob_two_out": 0.27533017576718805,
+        "prob_risp": 0.05919280103890506,
+        "prob_runners_on": 0.4446232965993905,
+        "expected_pa": 4.12517099974363,
+        "avg_runners_on": 0.30080625914672576,
+        "prob_bases_empty": 0.5553767034006095,
+        "delta_vs_avg": 0.0018993517532166493,
+        "delta_vs_primary": 0.0,
+        "fit_rank": 2
+      },
+      {
+        "slot": 7,
+        "expected_runs": 4.366642639640171,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.09876622230845988,
+        "expected_pa_162": 650.8219304969736,
+        "prob_two_out": 0.26664093148436785,
+        "prob_risp": 0.0607791442697263,
+        "prob_runners_on": 0.4542685360689242,
+        "expected_pa": 4.017419324055393,
+        "avg_runners_on": 0.307943133407229,
+        "prob_bases_empty": 0.5457314639310757,
+        "delta_vs_avg": 0.0018993517532166493,
+        "delta_vs_primary": 0.0,
+        "fit_rank": 3
+      },
+      {
+        "slot": 8,
+        "expected_runs": 4.36504905501872,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.102434144746571,
+        "expected_pa_162": 631.940121751766,
+        "prob_two_out": 0.28689429218327256,
+        "prob_risp": 0.06639951590923011,
+        "prob_runners_on": 0.43982566118686867,
+        "expected_pa": 3.9008649490849754,
+        "avg_runners_on": 0.3055769994878838,
+        "prob_bases_empty": 0.5601743388131313,
+        "delta_vs_avg": 0.00030576713176611037,
+        "delta_vs_primary": -0.001593584621450539,
+        "fit_rank": 5
+      },
+      {
+        "slot": 9,
+        "expected_runs": 4.36408302140816,
+        "weight_games": 2.0,
+        "prob_lead_inning": 0.09424754611062464,
+        "expected_pa_162": 612.7844563117181,
+        "prob_two_out": 0.2847748723359427,
+        "prob_risp": 0.0643422382530127,
+        "prob_runners_on": 0.4451238060404114,
+        "expected_pa": 3.7826201006896185,
+        "avg_runners_on": 0.3120608998448218,
+        "prob_bases_empty": 0.5548761939595886,
+        "delta_vs_avg": -0.000660266478794469,
+        "delta_vs_primary": -0.0025596182320111183,
+        "fit_rank": 7
+      }
+    ],
+    "note": "Batting order changes both the game states a hitter encounters and the number of plate appearances he receives."
+  },
+  "why_this_slot": [
+    {
+      "id": "best",
+      "text": "Best modeled placement for Turner Hill is slot #5 (4.367 expected team runs/game)."
+    },
+    {
+      "id": "equivalence",
+      "text": "Slots #5, #6, #7, #4, #8, #3, #9, #2, #1 are within 0.01 runs/game of each other \u2014 essentially equivalent under the model\u2019s operational band."
+    },
+    {
+      "id": "tiny_gap",
+      "text": "Difference between #5 and #6: 0.000 R/G."
+    },
+    {
+      "id": "opportunity",
+      "text": "Primary actual slot #7 ranks 3 of 9; estimated placement opportunity vs best is +0.000 R/G."
+    },
+    {
+      "id": "pa_allocation",
+      "text": "Slot #5 yields 4.23 expected PA/game vs 4.02 at primary slot #7. Batting order changes both game states and plate appearances."
+    }
+  ],
+  "observed_slot_splits": [],
+  "platoon_slot_fit": {
+    "neutral": {
+      "best_slot": 5,
+      "near_equivalent_slots": [
+        5,
+        6,
+        7,
+        4,
+        8,
+        3,
+        9,
+        2,
+        1
+      ],
+      "placement_opportunity": 0.0,
+      "n_starts": 2
+    }
+  },
+  "lineup_neighbors": {
+    "before": [
+      {
+        "player_id": 701852,
+        "name": "Drew Cavanaugh",
+        "n_adjacent_starts": 2,
+        "offensive_profile": "Spray Contact",
+        "association": null
+      }
+    ],
+    "after": [
+      {
+        "player_id": 671083,
+        "name": "Buddy Kennedy",
+        "n_adjacent_starts": 2,
+        "offensive_profile": null,
+        "association": null
+      }
+    ],
+    "note": "Neighbor counts are starting-lineup adjacency; pair effects are exploratory."
+  },
+  "method": "same_nine_relative_order_insertion; equivalence_eps=0.01; Markov LineupEngine with_flow",
+  "qualification": {
+    "overall_min_pa": 100,
+    "platoon_min_pa": 50,
+    "slot_min_pa": 30,
+    "slot_equivalence_eps": 0.01
+  }
+}

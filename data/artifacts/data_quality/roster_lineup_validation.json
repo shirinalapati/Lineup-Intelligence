@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-18T23:25:13",
+  "season": 2026,
+  "opening_date": "2026-03-25",
+  "through": "2026-08-18",
+  "sources": [
+    "https://statsapi.mlb.com/api/v1/transactions",
+    "https://statsapi.mlb.com/api/v1/teams/{id}/roster?rosterType=40Man"
+  ],
+  "n_raw_transactions": 15599,
+  "n_classified_events": 15453,
+  "n_tenure_intervals": 4585,
+  "n_status_intervals": 12140,
+  "n_players_with_tenure": 4110,
+  "overlapping_tenures": [],
+  "n_overlapping_tenures": 0,
+  "lineup_validation": {
+    "total_starting_player_observations": 34110,
+    "validated": 34110,
+    "mismatched": 0,
+    "unresolved": 0,
+    "validation_rate": 1.0,
+    "examples": []
+  },
+  "assumptions": [
+    "Intervals are half-open [start_at, end_at).",
+    "Opening-day 40-man is the membership baseline.",
+    "IL / option / recall / DFA do not end organizational tenure.",
+    "Trade/release/claim/sign/select change tenure.",
+    "Rehab/option assignments to affiliates keep MLB org membership.",
+    "Lineup-appearance fallback tenures are labeled low-confidence.",
+    "Explorer as-of uses reconstructed membership; hitter PA models remain 2024\u20132025 trained rates."
+  ],
+  "known_limitations": [
+    "MLB transaction descriptions are free text; status-change parsing can miss rare list types.",
+    "Same-day multi-move sequences use API effectiveDate (day resolution).",
+    "40-man snapshots include pitchers; Explorer still filters to hitters via lineup history / position."
+  ]
+}

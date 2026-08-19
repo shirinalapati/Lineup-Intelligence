@@ -1,0 +1,10 @@
+# Use on the Oracle VM: docker compose -f docker-compose.yml -f docker-compose.prod.yml up --build -d
+services:
+  web:
+    ports:
+      - "80:80"
+  api:
+    environment:
+      - LI_ROOT=/app
+      - LI_DAILY_REFRESH=1
+      - LI_DAILY_REFRESH_HOUR=14

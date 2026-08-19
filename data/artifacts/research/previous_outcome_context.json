@@ -1,0 +1,91 @@
+{
+  "groups": [
+    {
+      "prev_outcome_group": "strikeout",
+      "n": 75183,
+      "mean_residual": -0.004729827698337177,
+      "se": 0.0018048854254113606,
+      "mean_woba": 0.3000824654509663
+    },
+    {
+      "prev_outcome_group": "walk",
+      "n": 48432,
+      "mean_residual": -0.0015206456617535204,
+      "se": 0.00229677814371636,
+      "mean_woba": 0.3147241493227618
+    },
+    {
+      "prev_outcome_group": "single",
+      "n": 70845,
+      "mean_residual": 0.0014287097970784592,
+      "se": 0.0019032839429582041,
+      "mean_woba": 0.3180640835627073
+    },
+    {
+      "prev_outcome_group": "extra_base",
+      "n": 38262,
+      "mean_residual": 0.0010105290512652124,
+      "se": 0.0025893594069743724,
+      "mean_woba": 0.31815534995556943
+    },
+    {
+      "prev_outcome_group": "out_in_play",
+      "n": 155112,
+      "mean_residual": 0.0018655470784559563,
+      "se": 0.0012701149278617119,
+      "mean_woba": 0.3083393934705245
+    },
+    {
+      "prev_outcome_group": "reached_base",
+      "n": 157539,
+      "mean_residual": 0.00042042857605727163,
+      "se": 0.0012753936164916252,
+      "mean_woba": 0.31705945829286714
+    }
+  ],
+  "by_outcome_class": [
+    {
+      "prev_outcome": "OUT_IP",
+      "n": 155112,
+      "mean_residual": 0.0018655470784559563,
+      "se": 0.0012701149278617119
+    },
+    {
+      "prev_outcome": "K",
+      "n": 75183,
+      "mean_residual": -0.004729827698337177,
+      "se": 0.0018048854254113606
+    },
+    {
+      "prev_outcome": "1B",
+      "n": 70845,
+      "mean_residual": 0.0014287097970784599,
+      "se": 0.0019032839429582041
+    },
+    {
+      "prev_outcome": "BB_HBP",
+      "n": 48432,
+      "mean_residual": -0.0015206456617535202,
+      "se": 0.00229677814371636
+    },
+    {
+      "prev_outcome": "2B",
+      "n": 21141,
+      "mean_residual": -0.0026795900867007416,
+      "se": 0.003449520267620492
+    },
+    {
+      "prev_outcome": "HR",
+      "n": 15299,
+      "mean_residual": 0.006173259516905912,
+      "se": 0.004148723428414358
+    },
+    {
+      "prev_outcome": "3B",
+      "n": 1822,
+      "mean_residual": 0.0004771565495644339,
+      "se": 0.01188144808301846
+    }
+  ],
+  "note": "Means are residuals after base/out controls, so they are not the trivial 'runner on base boost.'"
+}

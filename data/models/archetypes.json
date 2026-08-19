@@ -1,0 +1,251 @@
+{
+  "train_season": 2025,
+  "train_source": "undervalued:/Users/Shirin/Undervalued_MLBPlayers/data/processed/comprehensive_stats_2025.csv",
+  "assign_seasons": [
+    2025,
+    2026
+  ],
+  "method": "kmeans",
+  "k": 4,
+  "silhouette": 0.14556685397782987,
+  "exploratory": true,
+  "display_name": "Exploratory offensive profile groups",
+  "features": [
+    "bb_pct",
+    "k_pct",
+    "iso",
+    "xwoba",
+    "hardhit_pct",
+    "barrel_pct",
+    "gb_pct",
+    "fb_pct",
+    "ld_pct",
+    "pull_pct",
+    "oppo_pct"
+  ],
+  "feature_means": {
+    "bb_pct": 0.08435380116959064,
+    "k_pct": 0.22070467836257307,
+    "iso": 0.16017251461988302,
+    "xwoba": 0.32630116959064326,
+    "hardhit_pct": 0.4132456140350877,
+    "barrel_pct": 0.08957894736842105,
+    "gb_pct": 0.4125116959064328,
+    "fb_pct": 0.3889152046783626,
+    "ld_pct": 0.19861695906432747,
+    "pull_pct": 0.4121520467836257,
+    "oppo_pct": 0.23998245614035088
+  },
+  "feature_scales": {
+    "bb_pct": 0.029711585846338227,
+    "k_pct": 0.05934848940358291,
+    "iso": 0.05449445547303338,
+    "xwoba": 0.03386997754278878,
+    "hardhit_pct": 0.07773450407662073,
+    "barrel_pct": 0.04378226858177658,
+    "gb_pct": 0.06256242387207861,
+    "fb_pct": 0.06491151288993241,
+    "ld_pct": 0.02811343051902474,
+    "pull_pct": 0.06030677164578612,
+    "oppo_pct": 0.043477489461488085
+  },
+  "min_pa_train": 150,
+  "min_pa_assign": 40,
+  "selection_grid": [
+    {
+      "method": "kmeans",
+      "k": 4,
+      "silhouette": 0.14556685397782987,
+      "inertia": 2275.9872435717352
+    },
+    {
+      "method": "gmm",
+      "k": 4,
+      "silhouette": -0.04568496422621449,
+      "bic": 5666.474548927479,
+      "aic": 4473.848409701009
+    },
+    {
+      "method": "kmeans",
+      "k": 5,
+      "silhouette": 0.1419167248521579,
+      "inertia": 2116.4541315741453
+    },
+    {
+      "method": "gmm",
+      "k": 5,
+      "silhouette": -0.05709802845609076,
+      "bic": 6031.302785159396,
+      "aic": 4539.561408442043
+    },
+    {
+      "method": "kmeans",
+      "k": 6,
+      "silhouette": 0.1338738648324681,
+      "inertia": 1996.7060546457835
+    },
+    {
+      "method": "gmm",
+      "k": 6,
+      "silhouette": -0.04152027921492604,
+      "bic": 6282.743900165498,
+      "aic": 4491.887285957262
+    },
+    {
+      "method": "kmeans",
+      "k": 7,
+      "silhouette": 0.13242876707626797,
+      "inertia": 1913.9440808792892
+    },
+    {
+      "method": "gmm",
+      "k": 7,
+      "silhouette": 0.042288102091924656,
+      "bic": 7081.951548346229,
+      "aic": 4991.979696647109
+    },
+    {
+      "method": "kmeans",
+      "k": 8,
+      "silhouette": 0.12251572888259933,
+      "inertia": 1835.90919619303
+    },
+    {
+      "method": "gmm",
+      "k": 8,
+      "silhouette": -0.02171609603430071,
+      "bic": 7035.689705816559,
+      "aic": 4646.6026166265565
+    }
+  ],
+  "clusters": [
+    {
+      "archetype_id": 0,
+      "archetype_label": "Spray Contact",
+      "n_train_players": 62,
+      "center_std": {
+        "bb_pct": -0.5335898679923384,
+        "k_pct": -0.9130569265515902,
+        "iso": -1.1388243236008995,
+        "xwoba": -0.8870128430572481,
+        "hardhit_pct": -1.2456020701044046,
+        "barrel_pct": -1.3007529521679628,
+        "gb_pct": 0.6744940317402706,
+        "fb_pct": -0.8109657098770221,
+        "ld_pct": 0.3704741402206489,
+        "pull_pct": -0.7898933478177022,
+        "oppo_pct": 0.6529473516802493
+      },
+      "center_raw": {
+        "bb_pct": 0.06849999999999999,
+        "k_pct": 0.16651612903225804,
+        "iso": 0.09811290322580646,
+        "xwoba": 0.296258064516129,
+        "hardhit_pct": 0.31641935483870964,
+        "barrel_pct": 0.032629032258064516,
+        "gb_pct": 0.4547096774193548,
+        "fb_pct": 0.3362741935483871,
+        "ld_pct": 0.2090322580645161,
+        "pull_pct": 0.36451612903225805,
+        "oppo_pct": 0.2683709677419355
+      }
+    },
+    {
+      "archetype_id": 1,
+      "archetype_label": "Three True Outcomes",
+      "n_train_players": 75,
+      "center_std": {
+        "bb_pct": 0.7236076954940583,
+        "k_pct": 0.5237199567579414,
+        "iso": 1.3011871531628683,
+        "xwoba": 1.0780096826625694,
+        "hardhit_pct": 0.9371349333680914,
+        "barrel_pct": 1.2981142322206742,
+        "gb_pct": -0.6867545497856143,
+        "fb_pct": 0.7309149518990178,
+        "ld_pct": -0.15853487041758918,
+        "pull_pct": 0.6864008593624219,
+        "oppo_pct": -0.5543663270093047
+      },
+      "center_raw": {
+        "bb_pct": 0.10585333333333333,
+        "k_pct": 0.25178666666666666,
+        "iso": 0.23108,
+        "xwoba": 0.3628133333333333,
+        "hardhit_pct": 0.48609333333333327,
+        "barrel_pct": 0.14641333333333328,
+        "gb_pct": 0.36954666666666663,
+        "fb_pct": 0.43636,
+        "ld_pct": 0.19416,
+        "pull_pct": 0.45354666666666665,
+        "oppo_pct": 0.21588
+      }
+    },
+    {
+      "archetype_id": 2,
+      "archetype_label": "Balanced",
+      "n_train_players": 100,
+      "center_std": {
+        "bb_pct": -0.01392726634420453,
+        "k_pct": 0.0361478726583629,
+        "iso": -0.13767482498463804,
+        "xwoba": -0.4222373508389911,
+        "hardhit_pct": -0.42420819977940005,
+        "barrel_pct": -0.26720742774143263,
+        "gb_pct": -0.5975103519465157,
+        "fb_pct": 0.6253866766358106,
+        "ld_pct": -0.11549494332006972,
+        "pull_pct": 0.5678956488921475,
+        "oppo_pct": -0.40118360918243084
+      },
+      "center_raw": {
+        "bb_pct": 0.08393999999999999,
+        "k_pct": 0.22285,
+        "iso": 0.15267,
+        "xwoba": 0.312,
+        "hardhit_pct": 0.38027,
+        "barrel_pct": 0.07787999999999999,
+        "gb_pct": 0.37512999999999996,
+        "fb_pct": 0.42951,
+        "ld_pct": 0.19537,
+        "pull_pct": 0.44639999999999996,
+        "oppo_pct": 0.22254
+      }
+    },
+    {
+      "archetype_id": 3,
+      "archetype_label": "Power",
+      "n_train_players": 105,
+      "center_std": {
+        "bb_pct": -0.1885264639248475,
+        "k_pct": 0.13062614689063612,
+        "iso": -0.1258518659570992,
+        "xwoba": 0.15588385860720003,
+        "hardhit_pct": 0.470124079255297,
+        "barrel_pct": 0.09532246087625054,
+        "gb_pct": 0.661323775815959,
+        "fb_pct": -0.6388325242250675,
+        "ld_pct": 0.004478218282342432,
+        "pull_pct": -0.564726112159037,
+        "oppo_pct": 0.3925057108549081
+      },
+      "center_raw": {
+        "bb_pct": 0.07875238095238095,
+        "k_pct": 0.22845714285714286,
+        "iso": 0.1533142857142857,
+        "xwoba": 0.33158095238095237,
+        "hardhit_pct": 0.44979047619047613,
+        "barrel_pct": 0.09375238095238093,
+        "gb_pct": 0.4538857142857143,
+        "fb_pct": 0.34744761904761906,
+        "ld_pct": 0.19874285714285714,
+        "pull_pct": 0.37809523809523804,
+        "oppo_pct": 0.257047619047619
+      }
+    }
+  ],
+  "notes": "Labels were assigned after inspecting standardized cluster centers. Handedness is intentionally excluded from the feature set so clusters reflect offensive profile rather than platoon side. Silhouette is weak (<0.25); treat groups as exploratory, not strong natural archetypes.",
+  "assign_sources": {
+    "2026": "undervalued:/Users/Shirin/Undervalued_MLBPlayers/data/processed/comprehensive_stats_2026.csv"
+  }
+}
