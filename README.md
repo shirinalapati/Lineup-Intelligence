@@ -83,7 +83,21 @@ source .venv/bin/activate
 PYTHONPATH=backend python scripts/run_pipeline.py
 ```
 
-To append newly completed 2026 games:
+### Daily updates
+
+A GitHub Action runs every day at **14:30 UTC**, refreshes completed games, and commits updated `data/` files to `main`. Pull to pick those up:
+
+```bash
+git pull
+```
+
+To also refresh this machine automatically (10:30am local):
+
+```bash
+bash scripts/install_daily_refresh_launchd.sh
+```
+
+Manual one-off:
 
 ```bash
 PYTHONPATH=backend python scripts/daily_refresh.py

@@ -1,6 +1,6 @@
 # Roster history validation
 
-Generated: 2026-08-18T23:25:13
+Generated: 2026-08-20T10:46:13
 
 ## Sources
 
@@ -12,17 +12,17 @@ Generated: 2026-08-18T23:25:13
 
 - Season: 2026
 - Opening date: 2026-03-25
-- Through: 2026-08-18
-- Classified events: 15453
-- Tenure intervals: 4585
-- Status intervals: 12140
-- Players with tenure: 4110
+- Through: 2026-08-20
+- Classified events: 15523
+- Tenure intervals: 4597
+- Status intervals: 12203
+- Players with tenure: 4115
 - Overlapping tenure pairs: 0
 
 ## Lineup membership validation
 
-- Starting-player observations: 34110
-- Validated: 34110
+- Starting-player observations: 34452
+- Validated: 34452
 - Mismatched: 0
 - Rate: 1.0
 
