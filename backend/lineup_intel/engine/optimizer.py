@@ -86,6 +86,57 @@ def _league_state_weights(R: np.ndarray, P: np.ndarray, E: np.ndarray) -> np.nda
     return w
 
 
+def _perm_from_index_py(pi, out):
+    """Pure-Python / NumPy lehmer decode (always available for imports)."""
+    fact = np.empty(9, dtype=np.int64)
+    fact[0] = 1
+    for i in range(1, 9):
+        fact[i] = fact[i - 1] * i
+    elems = np.empty(9, dtype=np.int64)
+    for i in range(9):
+        elems[i] = i
+    rem = int(pi)
+    for pos in range(9):
+        f = int(fact[8 - pos])
+        idx = int(rem // f)
+        rem = int(rem % f)
+        out[pos] = elems[idx]
+        for k in range(idx, 8 - pos):
+            elems[k] = elems[k + 1]
+
+
+def _score_all_perms_fast_py(slot_value, seq_bonus, lead_extra):
+    """Pure-Python exhaustive score fallback (slow; prefer Numba)."""
+    n_perms = 362880
+    scores = np.empty(n_perms, dtype=np.float64)
+    pa_w = np.array(
+        [1.15, 1.12, 1.09, 1.06, 1.03, 1.00, 0.97, 0.94, 0.91], dtype=np.float64
+    )
+    fact = np.empty(9, dtype=np.int64)
+    fact[0] = 1
+    for i in range(1, 9):
+        fact[i] = fact[i - 1] * i
+    order = np.empty(9, dtype=np.int64)
+    for pi in range(n_perms):
+        elems = np.arange(9, dtype=np.int64)
+        rem = int(pi)
+        for pos in range(9):
+            f = int(fact[8 - pos])
+            idx = int(rem // f)
+            rem = int(rem % f)
+            order[pos] = elems[idx]
+            for k in range(idx, 8 - pos):
+                elems[k] = elems[k + 1]
+        sc = float(lead_extra[order[0]])
+        for k in range(9):
+            sc += float(pa_w[k] * slot_value[order[k]])
+        for k in range(8):
+            sc += float(seq_bonus[order[k], order[k + 1]])
+        sc += 0.25 * float(seq_bonus[order[8], order[0]])
+        scores[pi] = sc
+    return scores
+
+
 if HAS_NUMBA:
 
     @njit(cache=True)
@@ -150,6 +201,10 @@ if HAS_NUMBA:
             sc += 0.25 * seq_bonus[order[8], order[0]]
             scores[pi] = sc
         return scores
+
+else:
+    _perm_from_index = _perm_from_index_py
+    _score_all_perms_fast = _score_all_perms_fast_py
 
 
 def _index_of_perm(perm: tuple[int, ...]) -> int:
