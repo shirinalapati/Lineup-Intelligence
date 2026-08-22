@@ -15,6 +15,7 @@ CLI:
 from __future__ import annotations
 
 import argparse
+import time
 from datetime import date, datetime, timedelta
 from typing import Any, Iterator
 
@@ -38,16 +39,36 @@ def _daterange(start: date, end: date) -> Iterator[date]:
 
 
 def _schedule_for_day(day: str, client: httpx.Client) -> list[dict]:
-    r = client.get(
-        "https://statsapi.mlb.com/api/v1/schedule",
-        params={"sportId": 1, "date": day, "hydrate": "team"},
-        timeout=30,
-    )
-    r.raise_for_status()
-    games: list[dict] = []
-    for d in r.json().get("dates") or []:
-        games.extend(d.get("games") or [])
-    return games
+    last_exc: Exception | None = None
+    for attempt in range(1, 5):
+        try:
+            r = client.get(
+                "https://statsapi.mlb.com/api/v1/schedule",
+                params={"sportId": 1, "date": day, "hydrate": "team"},
+                timeout=30,
+            )
+            if r.status_code in {408, 425, 429, 500, 502, 503, 504}:
+                raise httpx.HTTPStatusError(
+                    f"retryable status {r.status_code}",
+                    request=r.request,
+                    response=r,
+                )
+            r.raise_for_status()
+            games: list[dict] = []
+            for d in r.json().get("dates") or []:
+                games.extend(d.get("games") or [])
+            return games
+        except (httpx.HTTPStatusError, httpx.TransportError, httpx.TimeoutException) as exc:
+            last_exc = exc
+            if isinstance(exc, httpx.HTTPStatusError):
+                code = exc.response.status_code if exc.response is not None else None
+                if code is not None and code not in {408, 425, 429, 500, 502, 503, 504} and code < 500:
+                    raise
+            if attempt >= 4:
+                break
+            time.sleep(1.5 * attempt)
+    assert last_exc is not None
+    raise last_exc
 
 
 def _lineups_from_live(game_pk: int, client: httpx.Client) -> list[dict]:

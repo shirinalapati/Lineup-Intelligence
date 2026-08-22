@@ -52,16 +52,26 @@ def main() -> int:
         flush=True,
     )
 
+    # Roster rebuild hits MLB Stats API for many monthly transaction chunks.
+    # Morning scheduled runs often see transient 503s; do not abort lineup
+    # evaluation / artifact commit when roster refresh fails.
     print("[daily] update rosters / transactions", flush=True)
-    from lineup_intel.etl.update_rosters import build_roster_history
+    try:
+        from lineup_intel.etl.update_rosters import build_roster_history
 
-    roster_report = build_roster_history(season=args.season, through=through)
-    lv = roster_report.get("lineup_validation") or {}
-    print(
-        f"[daily] roster tenures={roster_report.get('n_tenure_intervals')} "
-        f"lineup_ok={lv.get('validated')}/{lv.get('total_starting_player_observations')}",
-        flush=True,
-    )
+        roster_report = build_roster_history(season=args.season, through=through)
+        lv = roster_report.get("lineup_validation") or {}
+        print(
+            f"[daily] roster tenures={roster_report.get('n_tenure_intervals')} "
+            f"lineup_ok={lv.get('validated')}/{lv.get('total_starting_player_observations')}",
+            flush=True,
+        )
+    except Exception as exc:  # noqa: BLE001
+        print(
+            f"[daily] WARNING: roster refresh failed (continuing with lineups/"
+            f"precompute): {exc!r}",
+            flush=True,
+        )
 
     if not args.skip_precompute:
         print("[daily] precompute new evaluations", flush=True)

@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import random
+import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -27,11 +29,48 @@ CACHE = settings.data_dir / "cache" / "mlb_api"
 TX_CACHE = CACHE / "transactions"
 ROSTER_CACHE = CACHE / "rosters"
 
+# MLB Stats API is flaky in the morning (common 503s). Retry + stale-cache
+# fallback keeps the daily refresh from failing on transient outages.
+_RETRYABLE_STATUS = {408, 425, 429, 500, 502, 503, 504}
+_HTTP_ATTEMPTS = 6
+_HTTP_BASE_SLEEP = 1.5
 
-def _http_get_json(url: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
-    r = httpx.get(url, params=params, timeout=45)
-    r.raise_for_status()
-    return r.json()
+
+def _http_get_json(
+    url: str,
+    params: dict[str, Any] | None = None,
+    *,
+    attempts: int = _HTTP_ATTEMPTS,
+) -> dict[str, Any]:
+    last_exc: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            r = httpx.get(url, params=params, timeout=45)
+            if r.status_code in _RETRYABLE_STATUS:
+                raise httpx.HTTPStatusError(
+                    f"retryable status {r.status_code}",
+                    request=r.request,
+                    response=r,
+                )
+            r.raise_for_status()
+            return r.json()
+        except (httpx.HTTPStatusError, httpx.TransportError, httpx.TimeoutException) as exc:
+            last_exc = exc
+            if isinstance(exc, httpx.HTTPStatusError):
+                code = exc.response.status_code if exc.response is not None else None
+                if code is not None and code not in _RETRYABLE_STATUS and code < 500:
+                    raise
+            if attempt >= attempts:
+                break
+            sleep = _HTTP_BASE_SLEEP * (2 ** (attempt - 1)) + random.uniform(0, 0.5)
+            print(
+                f"[rosters] HTTP retry {attempt}/{attempts} after {exc!r}; "
+                f"sleep {sleep:.1f}s",
+                flush=True,
+            )
+            time.sleep(sleep)
+    assert last_exc is not None
+    raise last_exc
 
 
 def _write_json(path: Path, payload: Any) -> None:
@@ -39,6 +78,10 @@ def _write_json(path: Path, payload: Any) -> None:
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
     tmp.replace(path)
+
+
+def _load_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def fetch_transactions(
@@ -60,19 +103,31 @@ def fetch_transactions(
         chunk_end = min(month_end, end)
         fname = TX_CACHE / f"{chunk_start.isoformat()}_{chunk_end.isoformat()}.json"
         if fname.exists() and not force:
-            payload = json.loads(fname.read_text(encoding="utf-8"))
+            payload = _load_json(fname)
             rows = payload.get("transactions") or payload
         else:
-            payload = _http_get_json(
-                "https://statsapi.mlb.com/api/v1/transactions",
-                params={
-                    "sportId": 1,
-                    "startDate": chunk_start.isoformat(),
-                    "endDate": chunk_end.isoformat(),
-                },
-            )
-            _write_json(fname, payload)
-            rows = payload.get("transactions") or []
+            try:
+                payload = _http_get_json(
+                    "https://statsapi.mlb.com/api/v1/transactions",
+                    params={
+                        "sportId": 1,
+                        "startDate": chunk_start.isoformat(),
+                        "endDate": chunk_end.isoformat(),
+                    },
+                )
+                _write_json(fname, payload)
+                rows = payload.get("transactions") or []
+            except Exception as exc:  # noqa: BLE001
+                if fname.exists():
+                    print(
+                        f"[rosters] using stale transaction cache {fname.name} "
+                        f"after fetch failure: {exc!r}",
+                        flush=True,
+                    )
+                    payload = _load_json(fname)
+                    rows = payload.get("transactions") or payload
+                else:
+                    raise
         if isinstance(rows, list):
             out.extend(rows)
         cursor = month_end + timedelta(days=1)
@@ -83,17 +138,28 @@ def fetch_40man_roster(team_id: int, as_of: date, *, force: bool = False) -> lis
     ROSTER_CACHE.mkdir(parents=True, exist_ok=True)
     path = ROSTER_CACHE / f"{int(team_id)}_{as_of.isoformat()}_40Man.json"
     if path.exists() and not force:
-        payload = json.loads(path.read_text(encoding="utf-8"))
+        payload = _load_json(path)
     else:
-        payload = _http_get_json(
-            f"https://statsapi.mlb.com/api/v1/teams/{int(team_id)}/roster",
-            params={
-                "rosterType": "40Man",
-                "season": as_of.year,
-                "date": as_of.isoformat(),
-            },
-        )
-        _write_json(path, payload)
+        try:
+            payload = _http_get_json(
+                f"https://statsapi.mlb.com/api/v1/teams/{int(team_id)}/roster",
+                params={
+                    "rosterType": "40Man",
+                    "season": as_of.year,
+                    "date": as_of.isoformat(),
+                },
+            )
+            _write_json(path, payload)
+        except Exception as exc:  # noqa: BLE001
+            if path.exists():
+                print(
+                    f"[rosters] using stale 40-man cache {path.name} "
+                    f"after fetch failure: {exc!r}",
+                    flush=True,
+                )
+                payload = _load_json(path)
+            else:
+                raise
     rows = []
     for entry in payload.get("roster") or []:
         person = entry.get("person") or {}
